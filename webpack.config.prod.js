@@ -28,9 +28,21 @@ module.exports = {
             {
                 // .less 解析
                 test: /\.(less|css)$/,
+                include: /(node_modules|assets)/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
+                    'postcss-loader',
+                    'less-loader'
+                ]
+            },
+            {
+                // .less 解析
+                test: /\.(less|css)$/,
+                exclude: /(node_modules|assets)/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader?modules&localIdentName=[local]-[hash:base64:5]',
                     'postcss-loader',
                     'less-loader'
                 ]
