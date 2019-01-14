@@ -3,9 +3,7 @@ import ReactDOM from "react-dom";
 
 import { Provider } from "react-redux";
 import Router from "./router";
-import configureStore from "./store/configureStore";
-
-const store = configureStore();
+import store from './store';
 import './assets/common.css'
 
 ReactDOM.render(

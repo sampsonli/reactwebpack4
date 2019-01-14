@@ -14,10 +14,4 @@ const reducers = {};
     });
 })(require.context('./', true, /\.js$/));
 
-const rootReducer = combineReducers({
-    routing: routerReducer,
-    ...reducers
-
-});
-
-export default rootReducer;
+export default reducers;
