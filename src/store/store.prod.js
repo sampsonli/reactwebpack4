@@ -6,13 +6,13 @@ import initReducers from '../reducers';
 
 const store = createStore(
     combineReducers(initReducers),
-    window && window.__INITIAL_STATE__,
+    window.__INITIAL_STATE__,
     applyMiddleware(thunkMiddleware),
 );
 const asyncReducers = {
     ...initReducers,
 };
-store.injectReducer = ({ key, reducer }) => {
+store.injectReducer = (key, reducer) => {
     if (!reducer || asyncReducers[key]) return;
     asyncReducers[key] = reducer;
     store.replaceReducer(combineReducers({

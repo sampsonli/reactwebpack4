@@ -13,11 +13,9 @@ export default class Demo extends Component {
     render() {
         const { match } = this.props;
         return (
-            <div className="l-full">
-                <Switch>
-                    <Route path={`${match.url}/app`} component={App} />
-                </Switch>
-            </div>
+            <Switch>
+                <Route path={`${match.url}/app`} component={App} />
+            </Switch>
         );
     }
 }
