@@ -1,10 +1,16 @@
 module.exports = {
     "extends": "airbnb",
     "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true
+    },
     "globals": {
         // "React": true
-        window: true
     },
+    "plugins": [
+        "react"
+    ],
     "rules": {
         "indent": [2, 4, {"SwitchCase": 1}],
         "object-curly-spacing": [0, "never"],

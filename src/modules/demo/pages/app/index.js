@@ -10,7 +10,8 @@ import * as actions from '../../actions';
 
 import logo from '../../assets/logo.svg';
 
-// @connect(state => ({ state: state.demo_ }))
+// export default
+// @connect(state => ({ state: state[NS] }), actions)
 class App extends Component {
     static propTypes = {
         state: P.objectOf(P.any).isRequired,
