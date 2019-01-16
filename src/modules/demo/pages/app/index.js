@@ -1,28 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './style.css';
+import { connect } from 'react-redux';
+import classNames from 'classnames';
+import P from 'prop-types';
+import logo from '../../assets/logo.svg';
 
-class Index extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+export default
+@connect(state => ({ stat: state.demo }))
+class App extends Component {
+    static propTypes = {
+        stat: P.string.isRequired,
+    }
+
+    render() {
+        const {stat} = this.props;
+        return (
+            <div className="l-full l-flex-column">
+                <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo" />
+
+                </header>
+                <div className="l-flex-1">
+                    <p>
+                        hello world
+                        {stat}
+                    </p>
+                    <a
+                      className="App-link"
+                      href="https://reactjs.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                Learn React1
+                    </a>
+                </div>
+            </div>
+        );
+    }
 }
-
-export default Index;

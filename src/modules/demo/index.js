@@ -1,27 +1,24 @@
-import {Component} from "react";
-import logo from "./assets/logo.svg";
-import React from "react";
+import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import loadable from 'react-loadable';
+import PropTypes from 'prop-types';
+import Loading from './components/Loading';
+
+
+const App = loadable({ loader: () => import('./pages/app'), loading: Loading });
 
 export default class Demo extends Component {
+    static propTypes = {
+        match: PropTypes.objectOf({url: PropTypes.string}).isRequired,
+    }
+
     render() {
+        const { match } = this.props;
         return (
-            <div className="l-full l-flex-column">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                </header>
-                <div className="l-flex-1">
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
-                </div>
+            <div className="l-full">
+                <Switch>
+                    <Route path={`${match.url}/app`} component={App} />
+                </Switch>
             </div>
         );
     }
