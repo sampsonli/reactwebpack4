@@ -2,7 +2,7 @@ module.exports = {
     "extends": "airbnb",
     "parser": "babel-eslint",
     "globals": {
-        "React": true
+        // "React": true
     },
     "rules": {
         "indent": [2, 4, {"SwitchCase": 1}],

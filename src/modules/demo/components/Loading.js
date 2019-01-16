@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default ({ pastDelay, timedOut, error }) => {
     if (pastDelay) {
         return <div>loading</div>;

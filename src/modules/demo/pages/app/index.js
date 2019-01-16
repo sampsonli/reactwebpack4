@@ -5,9 +5,8 @@ import classNames from 'classnames';
 import P from 'prop-types';
 import logo from '../../assets/logo.svg';
 
-export default
-@connect(state => ({ stat: state.demo }))
-class App extends Component {
+// @connect(state => ({ stat: state.demo }))
+export default class App extends Component {
     static propTypes = {
         stat: P.string.isRequired,
     }

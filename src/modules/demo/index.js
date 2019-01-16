@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import loadable from 'react-loadable';
-import PropTypes from 'prop-types';
-import Loading from './components/Loading';
+import P from 'prop-types';
 
-
-const App = loadable({ loader: () => import('./pages/app'), loading: Loading });
+const App = loadable({ loader: () => import('./pages/app'), loading: () => null });
 
 export default class Demo extends Component {
     static propTypes = {
-        match: PropTypes.objectOf({url: PropTypes.string}).isRequired,
+        match: P.shape({url: P.string}).isRequired,
     }
 
     render() {
