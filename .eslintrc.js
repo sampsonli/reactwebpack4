@@ -3,6 +3,7 @@ module.exports = {
     "parser": "babel-eslint",
     "globals": {
         // "React": true
+        window: true
     },
     "rules": {
         "indent": [2, 4, {"SwitchCase": 1}],
@@ -19,6 +20,7 @@ module.exports = {
         "react/jsx-no-bind": "off",
         "react/jsx-indent": "off",
         "react/jsx-first-prop-new-line": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
         "react/jsx-filename-extension": "off",
         "no-restricted-syntax": "off",
         "linebreak-style": "off",

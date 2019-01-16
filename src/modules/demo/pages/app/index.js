@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import './style.css';
-import { connect } from 'react-redux';
-import classNames from 'classnames';
 import P from 'prop-types';
+import { connect } from 'react-redux';
+// import classNames from 'classnames';
+import {NS} from '../../actions/types';
+import './style.css';
+import '../../reducer';
+
+import * as actions from '../../actions';
+
 import logo from '../../assets/logo.svg';
 
-// @connect(state => ({ stat: state.demo }))
-export default class App extends Component {
+// @connect(state => ({ state: state.demo_ }))
+class App extends Component {
     static propTypes = {
-        stat: P.string.isRequired,
+        state: P.objectOf(P.any).isRequired,
+        changeRed: P.func.isRequired,
     }
 
     render() {
-        const {stat} = this.props;
+        const {state, changeRed} = this.props;
         return (
             <div className="l-full l-flex-column">
                 <header className="App-header">
@@ -20,20 +26,12 @@ export default class App extends Component {
 
                 </header>
                 <div className="l-flex-1">
-                    <p>
+                    <div style={{backgroundColor: state.color}} onClick={changeRed}>
                         hello world
-                        {stat}
-                    </p>
-                    <a
-                      className="App-link"
-                      href="https://reactjs.org"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                Learn React1
-                    </a>
+                    </div>
                 </div>
             </div>
         );
     }
 }
+export default connect(state => ({ state: state[NS] }), actions)(App);

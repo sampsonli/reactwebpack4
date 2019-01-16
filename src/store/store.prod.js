@@ -6,7 +6,7 @@ import initReducers from '../reducers';
 
 const store = createStore(
     combineReducers(initReducers),
-    window.__INITIAL_STATE__,
+    window && window.__INITIAL_STATE__,
     applyMiddleware(thunkMiddleware),
 );
 const asyncReducers = {

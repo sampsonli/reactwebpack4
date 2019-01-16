@@ -5,7 +5,6 @@ const initState = {
         show: false,
     },
 }
-export default function evt(state = initState, action) {
-    console.log(action)
+export default function evt(state = initState) {
     return state;
 }
