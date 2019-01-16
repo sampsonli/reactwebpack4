@@ -1,6 +1,14 @@
+.header {
+  height: .5rem;
+  background-color: red;
+  line-height: .5rem;
+  text-align: center;
+  font-size: .2rem;
+  color: white;
+}
 .title {
   font-size: .2rem;
-  color: pink;
+  color: white;
   text-align: center;
   line-height: 2rem;
 }

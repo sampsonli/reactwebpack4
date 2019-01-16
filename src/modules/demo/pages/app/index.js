@@ -8,14 +8,12 @@ import '../../reducer';
 
 import * as actions from '../../actions';
 
-import logo from '../../assets/logo.svg';
-
 export default
-@connect(state => ({ state: state[NS] }), actions)
+@connect(state => ({ stat: state[NS] }), actions)
 class App extends Component {
     static propTypes = {
-        state: P.objectOf(P.any).isRequired,
-        changeRed: P.func.isRequired,
+        stat: P.objectOf(P.any).isRequired,
+        changeOra: P.func.isRequired,
         changeBlue: P.func.isRequired,
     }
 
@@ -28,10 +26,10 @@ class App extends Component {
 
 
     changeColor = () => {
-        const {changeBlue, changeRed} = this.props;
+        const {changeBlue, changeOra} = this.props;
         const {flag} = this.state;
         if (flag) {
-            changeRed();
+            changeOra();
         } else {
             changeBlue();
         }
@@ -41,14 +39,14 @@ class App extends Component {
     }
 
     render() {
-        const {state} = this.props;
+        const {stat} = this.props;
         return (
             <div className="l-full l-flex-column">
-                <header className="App-header" onClick={this.changeColor}>
-                    <img src={logo} className="App-logo" alt="logo" />
+                <header className={style.header} onClick={this.changeColor}>
+                    我爱你
                 </header>
                 <div className="l-flex-1 l-relative">
-                    <div className="l-full" style={{backgroundColor: state.color}}>
+                    <div className="l-full" style={{backgroundColor: stat.color}}>
                         <div className={style.title}>
                             hello world
                         </div>

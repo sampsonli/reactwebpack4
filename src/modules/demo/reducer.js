@@ -2,7 +2,7 @@ import {CHANGE_COLOR, NS} from './actions/types';
 import store from '~/store';
 
 const initState = {
-    color: '#883499',
+    color: '#000000',
 };
 const mutations = {
     [CHANGE_COLOR](state, payload) {

@@ -1,7 +1,7 @@
 import {CHANGE_COLOR} from './types';
 
-export function changeRed() {
-    const color = 'red';
+export function changeOra() {
+    const color = 'orange';
     return (dispatch) => dispatch({type: CHANGE_COLOR, payload: color});
 }
 export function changeBlue() {
