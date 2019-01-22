@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.2.0",
     "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
@@ -14,13 +16,14 @@
     "react-router-redux": "^4.0.8",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "scroll-accelerate": "^1.0.1"
   },
   "scripts": {
     "build": "rimraf dist/* && webpack --config webpack.config.prod.js",
     "clean": "rimraf dist",
-    "dev": "cross-env NODE_ENV=development PORT=3000 node server.js",
-    "start": "cross-env NODE_ENV=production PORT=80 node server.js"
+    "dev": "cross-env NODE_ENV=development PORT=3001 node server.js",
+    "start": "cross-env NODE_ENV=production PORT=3001 node server.js"
   },
   "browserslist": [
     ">0.2%",

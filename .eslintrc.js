@@ -33,7 +33,9 @@ module.exports = {
         "no-bitwise": "off",
         "jsx-a11y/no-static-element-interactions": "off",
         "arrow-parens": "off",
-        "consistent-return": "warn"
+        "consistent-return": "warn",
+        'max-len': 0,
+        "no-plusplus": 0,
     }
 
 };

@@ -6,9 +6,18 @@
   font-size: .2rem;
   color: white;
 }
-.title {
-  font-size: .2rem;
-  color: white;
-  text-align: center;
-  line-height: 2rem;
+.list {
+
+}
+.item {
+  height: 1rem;
+  background-color: pink;
+
+}
+.item:nth-child(2n) {
+  background-color: orange;
+}
+
+.list {
+  /*transition: 2s;*/
 }
