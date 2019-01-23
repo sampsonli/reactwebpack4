@@ -33,9 +33,14 @@ class App extends Component {
         const wheight = wrapper.offsetHeight;
         const cHeight = target.offsetHeight;
 
+        target.style.willChange = 'transform';
         const scroller = new Scroll((left, top) => {
             // target.style.transform = `translate3d(0, ${-top}px, 1)`;
-            target.style.transform = `translateY(${-top}px) translateZ(0)`;
+            if (typeof target.style.transform !== 'undefined') {
+                target.style.transform = `translateY(${-top}px) translateZ(0)`;
+            } else {
+                target.style.webkitTransform = `translateY(${-top}px) translateZ(0)`;
+            }
         }, {
             scrollingX: false,
             scrollingY: true,

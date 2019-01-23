@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fc7af75-2c60-40fa-ae9b-a9f942a3ce26" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/scroll.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/demo/pages/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/demo/pages/app/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -63,7 +61,7 @@
           <entry key="babelrc" value="178" />
           <entry key="css" value="319" />
           <entry key="gitignore" value="14" />
-          <entry key="js" value="4230" />
+          <entry key="js" value="4462" />
           <entry key="json" value="11" />
           <entry key="md" value="281" />
         </counts>
@@ -72,7 +70,7 @@
         <counts>
           <entry key="CSS" value="319" />
           <entry key="JSON" value="189" />
-          <entry key="JavaScript" value="4230" />
+          <entry key="JavaScript" value="4462" />
           <entry key="Markdown" value="281" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
@@ -84,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            <state relative-caret-position="171">
+              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -99,20 +97,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/scroll.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="134">
+              <caret line="736" lean-forward="true" selection-start-line="736" selection-end-line="736" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/modules/demo/pages/app/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1731">
-              <caret line="135" column="75" lean-forward="true" selection-start-line="135" selection-start-column="75" selection-end-line="135" selection-end-column="75" />
+            <state relative-caret-position="152">
+              <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
               <folding>
                 <element signature="e#196#235#0" expanded="true" />
               </folding>
@@ -145,6 +143,7 @@
       <find>transform</find>
       <find>animate</find>
       <find>assign</find>
+      <find>Scroller</find>
     </findStrings>
     <dirStrings>
       <dir>D:\other\reactwebpack4\src</dir>
@@ -187,8 +186,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/src/modules/demo/pages/app/index.js" />
         <option value="$PROJECT_DIR$/src/common/scroll.js" />
+        <option value="$PROJECT_DIR$/src/modules/demo/pages/app/index.js" />
       </list>
     </option>
   </component>
@@ -390,19 +389,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85805000" />
+    <option name="totallyTimeSpent" value="88332000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48625794" visible="true" weight="0.24966975" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4863158" visible="true" weight="0.24966975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.5137421" side_tool="true" visible="true" weight="0.24966975" />
+      <window_info id="npm" order="2" sideWeight="0.5136842" side_tool="true" visible="true" weight="0.24966975" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33002833" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33002833" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -410,7 +409,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3281471" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32719547" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32719547" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -700,13 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -714,13 +706,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/demo/pages/app/index.js">
+    <entry file="file://$PROJECT_DIR$/src/common/scroll.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1731">
-          <caret line="135" column="75" lean-forward="true" selection-start-line="135" selection-start-column="75" selection-end-line="135" selection-end-column="75" />
-          <folding>
-            <element signature="e#196#235#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="134">
+          <caret line="736" lean-forward="true" selection-start-line="736" selection-end-line="736" />
         </state>
       </provider>
     </entry>
@@ -731,10 +720,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/scroll.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        <state relative-caret-position="171">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/demo/pages/app/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="e#196#235#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
