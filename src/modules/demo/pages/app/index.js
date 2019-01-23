@@ -3,7 +3,7 @@ import P from 'prop-types';
 import { connect } from 'react-redux';
 // import classNames from 'classnames';
 // import {Scroller} from 'scroll-accelerate';
-import Scroller from '~/common/scroll';
+import Scroll from '~/common/scroll';
 
 import {NS} from '../../actions/types';
 import style from './style.css';
@@ -33,7 +33,7 @@ class App extends Component {
         const wheight = wrapper.offsetHeight;
         const cHeight = target.offsetHeight;
 
-        const scroller = new Scroller((left, top) => {
+        const scroller = new Scroll((left, top) => {
             // target.style.transform = `translate3d(0, ${-top}px, 1)`;
             target.style.transform = `translateY(${-top}px) translateZ(0)`;
         }, {
@@ -41,12 +41,7 @@ class App extends Component {
             scrollingY: true,
             animating: true,
             bouncing: false,
-            speedMultiplier: 1,
-            animationDuration: 10,
-            penetrationDeceleration: 0.001,
-            scrollingComplete() {
-                console.log('compelete');
-            },
+            frictionFactor: 0.96,
         })
         scroller.setDimensions(100, wheight, 100, cHeight);
         wrapper.addEventListener('touchstart', (e) => {
@@ -87,6 +82,45 @@ class App extends Component {
                 <div className="l-flex-1 l-relative">
                     <div className="l-full" id="wrapper">
                         <ul className={style.list} id="target">
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>111111111111111</li>
                             <li className={style.item}>111111111111111</li>
                             <li className={style.item}>111111111111111</li>
                             <li className={style.item}>111111111111111</li>

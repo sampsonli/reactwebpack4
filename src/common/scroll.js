@@ -1,16 +1,4 @@
-/*
- * Scroller
- * http://github.com/zynga/scroller
- *
- * Copyright 2011, Zynga Inc.
- * Licensed under the MIT License.
- * https://raw.github.com/zynga/scroller/master/MIT-LICENSE.txt
- *
- * Based on the work of: Unify Project (unify-project.org)
- * http://unify-project.org
- * Copyright 2011, Deutsche Telekom AG
- * License: MIT + Apache (V2)
- */
+
 const animate = (() => {
     const result = {};
     const global = typeof window === 'undefined' ? this : window;
@@ -19,32 +7,18 @@ const animate = (() => {
     const millisecondsPerSecond = 1000;
     let running = {};
     let counter = 1;
-
-    /**
-     * A requestAnimationFrame wrapper / polyfill.
-     *
-     * @param callback {Function} The callback to be invoked before the next repaint.
-     * @param root {HTMLElement} The root element for the repaint
-     */
     result.requestAnimationFrame = (function () {
         const requestFrame = global.requestAnimationFrame || global.webkitRequestAnimationFrame || global.mozRequestAnimationFrame || global.oRequestAnimationFrame;
         const isNative = !!requestFrame;
 
         if (isNative) {
-            return function (callback, root) {
+            return (callback, root) => {
                 requestFrame(callback, root);
             };
         }
         return null;
     }());
-
-    /**
-     * Stops the given animation.
-     *
-     * @param id {Integer} Unique animation ID
-     * @return {Boolean} Whether the animation was stopped (aka, was running before)
-     */
-    result.stop = function (id) {
+    result.stop = (id) => {
         const cleared = (running[id] !== null);
         if (cleared) {
             running[id] = null;
@@ -52,14 +26,6 @@ const animate = (() => {
 
         return cleared;
     };
-
-
-    /**
-     * Whether the given animation is still running.
-     *
-     * @param id {Integer} Unique animation ID
-     * @return {Boolean} Whether the animation is still running
-     */
     result.isRunning = function (id) {
         return running[id] !== null;
     };
@@ -158,7 +124,7 @@ const NOOP = () => null;
 /**
      * A pure logic 'component' for 'virtual' scrolling/zooming.
      */
-const Scroller = function (callback, options) {
+const Scroll = function (callback, options) {
     this.__callback = callback;
 
     this.options = {
@@ -198,6 +164,8 @@ const Scroller = function (callback, options) {
         /** Multiply or decrease scrolling speed * */
         speedMultiplier: 1,
 
+        frictionFactor: 0.95,
+
         /** Callback that is fired on the later of touch end or deceleration end,
              provided that another scrolling action has not begun. Used to know
              when to fade out a scrollbar. */
@@ -223,22 +191,26 @@ const Scroller = function (callback, options) {
      * @param pos {Number} position between 0 (start of effect) and 1 (end of effect)
      * */
 const easeOutCubic = function (pos) {
-    return (Math.pow((pos - 1), 3) + 1);
+    return (((pos - 1) ** 3) + 1);
 };
 
 /**
      * @param pos {Number} position between 0 (start of effect) and 1 (end of effect)
      * */
 const easeInOutCubic = function (pos) {
-    if ((pos /= 0.5) < 1) {
-        return 0.5 * Math.pow(pos, 3);
+    pos /= 5;
+    if (pos < 1) {
+    // if ((pos /= 0.5) < 1) {
+        // return 0.5 * Math.pow(pos, 3);
+        return 0.5 * (pos ** 3);
     }
 
-    return 0.5 * (Math.pow((pos - 2), 3) + 2);
+    // return 0.5 * (Math.pow((pos - 2), 3) + 2);
+    return 0.5 * (((pos - 2) ** 3) + 2);
 };
 
 
-Scroller.prototype = {
+Scroll.prototype = {
 
     /*
           ---------------------------------------------------------------------------
@@ -988,21 +960,6 @@ Scroller.prototype = {
         // Fully cleanup list
         this.__positions.length = 0;
     },
-
-
-    /*
-          ---------------------------------------------------------------------------
-          PRIVATE API
-          ---------------------------------------------------------------------------
-        */
-
-    /**
-         * Applies the scroll position to the content element
-         *
-         * @param left {Number} Left scroll position
-         * @param top {Number} Top scroll position
-         * @param isAnimated {Boolean?false} Whether animation should be used to move to the new coordinates
-         */
     __publish(left, top, zoom, isAnimated) {
         // Remember whether we had an animation, then we try to continue
         // based on the current "drive" of the animation.
@@ -1063,9 +1020,14 @@ Scroller.prototype = {
             // When continuing based on previous animation we choose an ease-out animation instead of ease-in-out
             this.__isAnimating = animate.start(step, verify, completed, this.options.animationDuration, wasAnimating ? easeOutCubic : easeInOutCubic);
         } else {
-            this.__scheduledLeft = this.__scrollLeft = left;
-            this.__scheduledTop = this.__scrollTop = top;
-            this.__scheduledZoom = this.__zoomLevel = zoom;
+            this.__scrollLeft = left;
+            this.__scheduledLeft = this.__scrollLeft;
+
+            this.__scrollTop = top;
+            this.__scheduledTop = this.__scrollTop;
+
+            this.__zoomLevel = zoom;
+            this.__scheduledZoom = this.__zoomLevel;
 
             // Push values out
             if (this.__callback) {
@@ -1107,7 +1069,7 @@ Scroller.prototype = {
          * Called when a touch sequence end and the speed of the finger was high enough
          * to switch into deceleration mode.
          */
-    __startDeceleration(timeStamp) {
+    __startDeceleration() {
         if (this.options.paging) {
             const scrollLeft = Math.max(Math.min(this.__scrollLeft, this.__maxScrollLeft), 0);
             const scrollTop = Math.max(Math.min(this.__scrollTop, this.__maxScrollTop), 0);
@@ -1145,7 +1107,7 @@ Scroller.prototype = {
             return shouldContinue;
         }.bind(this);
 
-        const completed = function (renderedFramesPerSecond, animationId, wasFinished) {
+        const completed = function () {
             this.__isDecelerating = false;
             if (this.__didDecelerationComplete) {
                 this.options.scrollingComplete();
@@ -1215,7 +1177,7 @@ Scroller.prototype = {
             // This is the factor applied to every iteration of the animation
             // to slow down the process. This should emulate natural behavior where
             // objects slow down when the initiator of the movement is removed
-            const frictionFactor = 0.95;
+            const frictionFactor = this.options.frictionFactor || 0.95;
 
             this.__decelerationVelocityX *= frictionFactor;
             this.__decelerationVelocityY *= frictionFactor;
@@ -1267,4 +1229,4 @@ Scroller.prototype = {
     },
 };
 
-export default Scroller;
+export default Scroll;
