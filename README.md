@@ -1,25 +1,9 @@
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## 快速迭代
+1. 会议过多， 一个迭代周期开发时间占比过少， 限制了一个迭代工作量
+2. 技术细分非必需， 相信对于大部分开发来说， 细分是多余， 而且占据迭代周期大部分时间， 建议把细分时间归入开发时间，同时可以把技术系分会议改为项目排期
+3. 绩效考核不应该把禅道里面的内容归入进去， 感觉目前禅道完完全全是为了绩效而设立， 真正没有发挥任何作用
 
 
-## Learn More
-
-### Code Splitting
-
+## 
+1. 不应过重看重基建， 业务优先（大部分基建没啥意义）， 可以自己做一些基建的活 快速实现业务线迭代工作
+2. 可以考虑成立独立的线， 不做业务，专门针对每一条业务线技术进行改造，比如前后端分离， 或者支援别的业务线

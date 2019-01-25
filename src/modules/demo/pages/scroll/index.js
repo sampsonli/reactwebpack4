@@ -5,19 +5,14 @@ import { connect } from 'react-redux';
 // import {Scroller} from 'scroll-accelerate';
 import IScroll from '~/common/iscroll';
 
-import {NS} from '../../actions/types';
 import style from './style.css';
-import '../../reducer';
 
-import * as actions from '../../actions';
 
 export default
-@connect(state => ({ stat: state[NS] }), actions)
+@connect(state => ({ stat: state.demo2 }))
 class ScrollDemo extends Component {
     static propTypes = {
         stat: P.objectOf(P.any).isRequired,
-        changeOra: P.func.isRequired,
-        changeBlue: P.func.isRequired,
     }
 
     constructor(props) {
@@ -41,20 +36,6 @@ class ScrollDemo extends Component {
             deceleration: 0.001,
         });
         console.log(scroll);
-    }
-
-
-    changeColor = () => {
-        const {changeBlue, changeOra} = this.props;
-        const {flag} = this.state;
-        if (flag) {
-            changeOra();
-        } else {
-            changeBlue();
-        }
-        this.setState({
-            flag: !flag,
-        });
     }
 
     render() {
