@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import Scroll from '~/common/scroll';
 
 import style from './style.css';
-import action from '../../models/model01';
+import action from '../../models/test';
 
 export default
-@connect(state => ({ stat: state.demo2 }))
+@connect(state => ({ stat: state.test }))
 class App extends Component {
     static propTypes = {
         stat: P.objectOf(P.any).isRequired,

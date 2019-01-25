@@ -1,7 +1,7 @@
 import store from '~/store';
 
 const model = {
-    ns: 'demo2',
+    ns: 'test',
     state: {
         abc: 123,
     },
