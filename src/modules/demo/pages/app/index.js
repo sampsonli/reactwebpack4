@@ -65,13 +65,13 @@ class App extends Component {
                 <div className="l-flex-1 l-relative">
                     <div className="l-full" id="wrapper">
                         <ul className={style.list} id="target">
+                            <li className={style.item}>11111111kkkk1111</li>
+                            <li className={style.item}>111aaaa111111111</li>
                             <li className={style.item}>111111111111111</li>
                             <li className={style.item}>111111111111111</li>
                             <li className={style.item}>111111111111111</li>
                             <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
+                            <li className={style.item}>1111111555111111</li>
                             <li className={style.item}>111111111111111</li>
                             <li className={style.item}>111111111111111</li>
                             <li className={style.item}>111111111111111</li>
