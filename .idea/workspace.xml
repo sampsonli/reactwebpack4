@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5fc7af75-2c60-40fa-ae9b-a9f942a3ce26" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/demo/pages/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/demo/pages/app/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/demo/pages/scroll/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/demo/pages/scroll/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,7 +36,7 @@
           <entry key="ejs" value="3" />
           <entry key="gitignore" value="3" />
           <entry key="html" value="3" />
-          <entry key="js" value="140" />
+          <entry key="js" value="141" />
           <entry key="json" value="17" />
           <entry key="jsx" value="1" />
           <entry key="md" value="5" />
@@ -55,7 +51,7 @@
           <entry key="HTML" value="3" />
           <entry key="JSON" value="23" />
           <entry key="JSX Harmony" value="1" />
-          <entry key="JavaScript" value="140" />
+          <entry key="JavaScript" value="141" />
           <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SVG" value="5" />
@@ -67,7 +63,7 @@
           <entry key="babelrc" value="178" />
           <entry key="css" value="334" />
           <entry key="gitignore" value="14" />
-          <entry key="js" value="6876" />
+          <entry key="js" value="6886" />
           <entry key="json" value="11" />
           <entry key="md" value="658" />
         </counts>
@@ -76,7 +72,7 @@
         <counts>
           <entry key="CSS" value="334" />
           <entry key="JSON" value="189" />
-          <entry key="JavaScript" value="6876" />
+          <entry key="JavaScript" value="6886" />
           <entry key="Markdown" value="658" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
@@ -109,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modules/demo/pages/app/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="56" column="5" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="133">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="37" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -130,8 +126,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/modules/demo/pages/scroll/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+            <state relative-caret-position="-1729">
+              <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#196#235#0" expanded="true" />
@@ -145,6 +141,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
               <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/iscroll.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="333" column="95" selection-start-line="333" selection-start-column="81" selection-end-line="333" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -167,6 +172,7 @@
       <find>assign</find>
       <find>Scroller</find>
       <find>isBadAndroid</find>
+      <find>passive</find>
     </findStrings>
     <dirStrings>
       <dir>D:\other\reactwebpack4\src</dir>
@@ -264,6 +270,12 @@
               <item name="reactwebpack4" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactwebpack4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactwebpack4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactwebpack4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactwebpack4" type="b2602c69:ProjectViewProjectNode" />
@@ -415,12 +427,12 @@
       <workItem from="1548141282345" duration="776000" />
       <workItem from="1548293869745" duration="137000" />
       <workItem from="1548311448287" duration="2301000" />
-      <workItem from="1548321255800" duration="19179000" />
+      <workItem from="1548321255800" duration="19899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117590000" />
+    <option name="totallyTimeSpent" value="118310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -720,13 +732,6 @@
     <entry file="file://$PROJECT_DIR$/src/models/common.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/iscroll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="87" column="40" lean-forward="true" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/scroll.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4453">
@@ -787,18 +792,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/demo/pages/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="56" column="5" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+        <state relative-caret-position="133">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="37" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/iscroll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="333" column="95" selection-start-line="333" selection-start-column="81" selection-end-line="333" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/demo/pages/scroll/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        <state relative-caret-position="-1729">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#196#235#0" expanded="true" />
