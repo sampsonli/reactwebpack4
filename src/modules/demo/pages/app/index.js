@@ -13,6 +13,7 @@ class App extends Component {
     static propTypes = {
         stat: P.objectOf(P.any).isRequired,
     }
+
     componentDidMount() {
         const wrapper = document.querySelector('#wrapper');
         const target = document.querySelector('#target');
@@ -33,7 +34,7 @@ class App extends Component {
             animating: true,
             bouncing: false,
             frictionFactor: 0.96,
-        })
+        });
         scroller.setDimensions(100, wheight, 100, cHeight);
         wrapper.addEventListener('touchstart', (e) => {
             scroller.doTouchStart(e.touches, e.timeStamp);
@@ -65,8 +66,8 @@ class App extends Component {
                 <div className="l-flex-1 l-relative">
                     <div className="l-full" id="wrapper">
                         <ul className={style.list} id="target">
-                            <li className={style.item}>11111111kkkk1111</li>
-                            <li className={style.item}>111aaaa111111111</li>
+                            <li className={style.item}>000000000000</li>
+                            <li className={style.item}>uuuuuuuuuu</li>
                             <li className={style.item}>111111111111111</li>
                             <li className={style.item}>111111111111111</li>
                             <li className={style.item}>111111111111111</li>

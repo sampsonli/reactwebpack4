@@ -4,27 +4,21 @@ import { connect } from 'react-redux';
 // import classNames from 'classnames';
 // import {Scroller} from 'scroll-accelerate';
 import IScroll from '~/common/iscroll';
-
+import action from '../../models/test';
 import style from './style.css';
 
 
 export default
-@connect(state => ({ stat: state.demo2 }))
+@connect(state => ({ stat: state.test }))
 class ScrollDemo extends Component {
     static propTypes = {
         stat: P.objectOf(P.any).isRequired,
     }
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            flag: true,
-        };
-    }
 
     componentDidMount() {
         const wrapper = document.querySelector('#wrapper');
-        const scroll = new IScroll(wrapper, {
+        new IScroll(wrapper, {
             disablePointer: true,
             disableTouch: false,
             disableMouse: false,
@@ -35,15 +29,19 @@ class ScrollDemo extends Component {
             // useTransition: false,
             deceleration: 0.001,
         });
-        console.log(scroll);
+    }
+
+    changeColor = () => {
+        const num = Math.random() * 1000000;
+        action.getUserInfo(num);
     }
 
     render() {
         const {stat} = this.props;
         return (
             <div className="l-full l-flex-column">
-                <div className={style.header}>
-                    demo
+                <div className={style.header} onClick={this.changeColor}>
+                    {stat.abc}
                 </div>
                 <div className="l-flex-1 l-relative">
                     <div className="l-full" id="wrapper">
