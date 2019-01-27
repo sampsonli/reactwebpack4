@@ -18,17 +18,13 @@ class ScrollDemo extends Component {
 
     componentDidMount() {
         const wrapper = document.querySelector('#wrapper');
-        new IScroll(wrapper, {
-            // disablePointer: true,
-            // disableTouch: false,
+        const scroll = new IScroll(wrapper, {
             disableMouse: false,
             bounce: true,
-            // freeScroll: true,
-            // scrollX: true,
-            // scrollY: true,
-            // useTransition: true,
+            // useTransition: false,
             deceleration: 0.001,
         });
+        console.log(scroll);
     }
 
     changeColor = () => {
@@ -39,7 +35,7 @@ class ScrollDemo extends Component {
     render() {
         const {stat} = this.props;
         return (
-            <div className="l-full l-flex-column">
+            <div className={`l-full l-flex-column ${style.wrapper}`}>
                 <div className={style.header} onClick={this.changeColor}>
                     {stat.abc}
                 </div>

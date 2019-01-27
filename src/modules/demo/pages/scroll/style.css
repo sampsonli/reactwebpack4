@@ -1,3 +1,6 @@
+.wrapper {
+  touch-action: none;
+}
 .header {
   height: .5rem;
   background-color: red;
@@ -6,11 +9,7 @@
   font-size: .2rem;
   color: white;
 }
-.list {
-  touch-action: none;
 
-  /*width: 10rem;*/
-}
 .item {
   height: 1rem;
   background-color: pink;
