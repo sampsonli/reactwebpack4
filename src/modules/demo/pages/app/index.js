@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import Scroll from '~/common/scroll';
 
 import style from './style.css';
-import action from '../../models/test';
+import action, {ns} from '../../models/test';
 
 export default
-@connect(state => ({ stat: state.test }))
+@connect(state => ({ stat: state[ns] }))
 class App extends Component {
     static propTypes = {
         stat: P.objectOf(P.any).isRequired,
@@ -35,16 +35,28 @@ class App extends Component {
             bouncing: false,
             frictionFactor: 0.96,
         });
+        let types = ['pointerdown', 'pointermove', 'pointerup', 'pointercancel'];
+        if (!window.PointerEvent) {
+            types = ['touchstart', 'touchmove', 'touchend', 'touchcancel'];
+        }
         scroller.setDimensions(100, wheight, 100, cHeight);
-        wrapper.addEventListener('touchstart', (e) => {
-            scroller.doTouchStart(e.touches, e.timeStamp);
+        // wrapper.addEventListener('touchstart', (e) => {
+        wrapper.addEventListener(types[0], (e) => {
+            scroller.doTouchStart(e.touches || [e], e.timeStamp);
             e.preventDefault();
         });
-        wrapper.addEventListener('touchmove', (e) => {
-            scroller.doTouchMove(e.touches, e.timeStamp);
+        // wrapper.addEventListener('touchmove', (e) => {
+        wrapper.addEventListener(types[1], (e) => {
+            scroller.doTouchMove(e.touches || [e], e.timeStamp);
             e.preventDefault();
         });
-        wrapper.addEventListener('touchend', (e) => {
+        // wrapper.addEventListener('touchend', (e) => {
+        wrapper.addEventListener(types[2], (e) => {
+            scroller.doTouchEnd(e.timeStamp);
+            e.preventDefault();
+        });
+        // wrapper.addEventListener('touchend', (e) => {
+        wrapper.addEventListener(types[3], (e) => {
             scroller.doTouchEnd(e.timeStamp);
             e.preventDefault();
         });
@@ -64,7 +76,7 @@ class App extends Component {
                     {stat.abc}
                 </div>
                 <div className="l-flex-1 l-relative">
-                    <div className="l-full" id="wrapper">
+                    <div className="l-full" style={{overflow: 'hidden'}} id="wrapper">
                         <ul className={style.list} id="target">
                             <li className={style.item}>000000000000</li>
                             <li className={style.item}>uuuuuuuuuu</li>

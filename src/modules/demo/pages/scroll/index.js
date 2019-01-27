@@ -19,14 +19,14 @@ class ScrollDemo extends Component {
     componentDidMount() {
         const wrapper = document.querySelector('#wrapper');
         new IScroll(wrapper, {
-            disablePointer: true,
-            disableTouch: false,
+            // disablePointer: true,
+            // disableTouch: false,
             disableMouse: false,
             bounce: true,
             // freeScroll: true,
             // scrollX: true,
             // scrollY: true,
-            // useTransition: false,
+            // useTransition: true,
             deceleration: 0.001,
         });
     }

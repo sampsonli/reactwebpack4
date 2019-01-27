@@ -16,4 +16,5 @@ const model = {
         },
     },
 };
+export const {ns} = model;
 export default store.connect(model);

@@ -7,7 +7,7 @@
   color: white;
 }
 .list {
-
+  touch-action: none;
 }
 .item {
   height: 1rem;

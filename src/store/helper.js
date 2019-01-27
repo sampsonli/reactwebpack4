@@ -1,7 +1,7 @@
 
 import {combineReducers} from 'redux';
 
-export default (store, asyncReducers) => {
+export default (store, asyncReducers = {}) => {
     store.injectReducer = (key, reducer) => {
         if (!reducer || asyncReducers[key]) return;
         asyncReducers[key] = reducer;
@@ -16,7 +16,7 @@ export default (store, asyncReducers) => {
             return;
         }
         if (asyncReducers[model.ns]) {
-            console.error('模块命名空间重复，可能会引起未知错误');
+            console.error('模块命名重复，可能会引发未知错误');
             return;
         }
         const mutations = {};
@@ -50,4 +50,4 @@ export default (store, asyncReducers) => {
         });
         return actions;
     };
-}
+};
