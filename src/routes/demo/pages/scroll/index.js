@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 // import classNames from 'classnames';
 // import {Scroller} from 'scroll-accelerate';
 import IScroll from '~/common/iscroll';
-import action from '../../models/test';
+import action, {ns} from '../../models/test';
 import style from './style.css';
 
 
 export default
-@connect(state => ({ stat: state.test }))
+@connect(state => ({ stat: state[ns] }))
 class ScrollDemo extends Component {
     static propTypes = {
         stat: P.objectOf(P.any).isRequired,
