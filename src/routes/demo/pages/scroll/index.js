@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import P from 'prop-types';
 import { connect } from 'react-redux';
 // import classNames from 'classnames';
-// import {Scroller} from 'scroll-accelerate';
 import IScroll from '~/common/iscroll';
 import action, {ns} from '../../models/test';
-import style from './style.css';
+import style from './style.less';
 
 
 export default
@@ -15,16 +14,31 @@ class ScrollDemo extends Component {
         stat: P.objectOf(P.any).isRequired,
     }
 
+    constructor(args) {
+        super(args);
+        const {stat: {newsList}} = this.props;
+        if (!newsList) {
+            action.getNewsList().then(() => {
+                setTimeout(() => {
+                    this.initScroll();
+                }, 16.7);
+            });
+        }
+    }
+
 
     componentDidMount() {
+        this.initScroll();
+    }
+
+    initScroll = () => {
         const wrapper = document.querySelector('#wrapper');
-        const scroll = new IScroll(wrapper, {
+        this.scroll = new IScroll(wrapper, {
             disableMouse: false,
             bounce: true,
             // useTransition: false,
             deceleration: 0.001,
         });
-        console.log(scroll);
     }
 
     changeColor = () => {
@@ -32,82 +46,32 @@ class ScrollDemo extends Component {
         action.getUserInfo(num);
     }
 
+    jumpUrl = (url) => {
+        location.href = url;
+    }
+
     render() {
         const {stat} = this.props;
         return (
             <div className={`l-full l-flex-column ${style.wrapper}`}>
-                <div className={style.header} onClick={this.changeColor}>
-                    {stat.abc}
+                <div className={style.header}>
+                    新闻头条
                 </div>
                 <div className="l-flex-1 l-relative">
                     <div className="l-full" id="wrapper">
-                        <ul className={style.list} id="target">
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                            <li className={style.item}>111111111111111</li>
-                        </ul>
+                        {stat.newsList
+                            && (
+
+                                <ul className={style.list} id="target">
+                                    {stat.newsList.map(item => (
+                                        <li onClick={() => this.jumpUrl(item.url)} key={item.uniquekey} className={style.item}>
+                                            <div className={style.title}>{item.title}</div>
+                                            <div className={style.imgct}><img src={item.thumbnail_pic_s} /></div>
+
+                                        </li>
+                                    ))}
+                                </ul>
+                            ) || <div className="empty" />}
                     </div>
 
                 </div>
