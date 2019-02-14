@@ -71,7 +71,7 @@ class ScrollDemo extends Component {
                                         </li>
                                     ))}
                                 </ul>
-                            ) || <div className="empty" />}
+                        ) || <div className="empty l-full l-box-center" >加载中...</div>}
                     </div>
 
                 </div>

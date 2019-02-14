@@ -5,7 +5,8 @@
 import axios from 'axios';
 
 const options = {
-    baseURL: 'http://67.230.178.236:3005',
+    baseURL: 'http://ms.sinwai.cn/api/news',
+    timeout: 2000,
 };
 /* if (process.env.NODE_ENV === 'production') {
     options.baseURL = 'http://weixin.yijiahx.com'
@@ -29,6 +30,9 @@ ajax.get = function (url, config) {
             return response.data;
         }
         throw new Error(response.message);
+    }).catch(e => {
+        alert(e.message)
+        // alert(JSON.stringify(e))
     });
 };
 ajax.post = function (url, param, config) {

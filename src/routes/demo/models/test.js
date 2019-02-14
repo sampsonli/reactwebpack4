@@ -17,11 +17,16 @@ const model = {
     },
     actions: {
         async getNewsList({commit}, type) {
-            const info = await ajax.get(`/news/${type || ''}`);
-            if (info.stat === '1') {
-                commit('setNewsList', info.data);
-                return info.data;
+            try {
+                const info = await ajax.get(`/news/${type || ''}`);
+                if (info.stat === '1') {
+                    commit('setNewsList', info.data);
+                    return info.data;
+                }
+            } catch (e) {
+                console.error(e.message);
             }
+
         },
         getUserInfo({commit}, payload) {
             commit('changeAbc', payload);
