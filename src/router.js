@@ -1,5 +1,7 @@
 import React from 'react';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+    HashRouter as Router, Switch, Route, Redirect,
+} from 'react-router-dom';
 
 const routes = [];
 ((r) => {
@@ -14,6 +16,7 @@ export default () => (
     <Router>
         <Switch>
             { routes.map(r => <Route key={r.path} component={r.component} path={r.path} />)}
+            <Redirect from="/" to="/demo/scroll" />
         </Switch>
     </Router>
 );
