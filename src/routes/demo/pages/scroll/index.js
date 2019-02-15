@@ -67,7 +67,7 @@ class ScrollDemo extends Component {
                                 <ul className={style.list} id="target">
                                     {stat.newsList.map(item => (
                                         <li onClick={() => this.jumpUrl(item.url)} key={item.uniquekey} className={style.item}>
-                                            <div className={style.title}>{item.title}</div>
+                                            <div className={style.title}>{item.title}<br/>{item.date}</div>
                                             <div className={style.imgct}><img alt="" src={item.thumbnail_pic_s} /></div>
 
                                         </li>
