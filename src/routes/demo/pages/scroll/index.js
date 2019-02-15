@@ -33,12 +33,15 @@ class ScrollDemo extends Component {
 
     initScroll = () => {
         const wrapper = document.querySelector('#wrapper');
-        this.scroll = new IScroll(wrapper, {
-            disableMouse: false,
-            bounce: true,
-            // useTransition: false,
-            deceleration: 0.001,
-        });
+        if (wrapper) {
+            this.scroll = new IScroll(wrapper, {
+                disableMouse: false,
+                bounce: true,
+                preventDefault: false,
+                // useTransition: false,
+                deceleration: 0.001,
+            });
+        }
     }
 
     changeColor = () => {
@@ -47,7 +50,7 @@ class ScrollDemo extends Component {
     }
 
     jumpUrl = (url) => {
-        location.href = url;
+        window.location.href = url;
     }
 
     render() {
@@ -61,17 +64,16 @@ class ScrollDemo extends Component {
                     <div className="l-full" id="wrapper">
                         {stat.newsList
                             && (
-
                                 <ul className={style.list} id="target">
                                     {stat.newsList.map(item => (
                                         <li onClick={() => this.jumpUrl(item.url)} key={item.uniquekey} className={style.item}>
                                             <div className={style.title}>{item.title}</div>
-                                            <div className={style.imgct}><img src={item.thumbnail_pic_s} /></div>
+                                            <div className={style.imgct}><img alt="" src={item.thumbnail_pic_s} /></div>
 
                                         </li>
                                     ))}
                                 </ul>
-                        ) || <div className="empty l-full l-box-center" >加载中...</div>}
+                            ) || <div className="empty l-full l-box-center">加载中...</div>}
                     </div>
 
                 </div>
