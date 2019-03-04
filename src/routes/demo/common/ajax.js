@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const options = {
     baseURL: 'http://ms.sinwai.cn/api/news',
-    timeout: 2000,
+    timeout: 20000,
 };
 /* if (process.env.NODE_ENV === 'production') {
     options.baseURL = 'http://weixin.yijiahx.com'
