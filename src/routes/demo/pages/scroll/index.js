@@ -57,8 +57,8 @@ class ScrollDemo extends Component {
         const {stat} = this.props;
         return (
             <div className={`l-full l-flex-column ${style.wrapper}`}>
-                <div className={style.header}>
-                    <span>新闻头条2</span>
+                <div className={style.header} onClick={this.changeColor}>
+                    <span>新闻头条-{stat.abc}</span>
                 </div>
                 <div className="l-flex-1 l-relative">
                     <div className="l-full" id="wrapper">
