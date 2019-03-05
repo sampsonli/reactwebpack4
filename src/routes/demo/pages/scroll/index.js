@@ -58,7 +58,7 @@ class ScrollDemo extends Component {
         return (
             <div className={`l-full l-flex-column ${style.wrapper}`}>
                 <div className={style.header}>
-                    新闻头条1
+                    <span>新闻头条2</span>
                 </div>
                 <div className="l-flex-1 l-relative">
                     <div className="l-full" id="wrapper">
