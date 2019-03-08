@@ -2,7 +2,7 @@
 import {combineReducers} from 'redux';
 
 export default (store, asyncReducers = {}) => {
-    store.injectReducer = (key, reducer) => {
+    const injectReducer = (key, reducer) => {
         asyncReducers[key] = reducer;
         store.replaceReducer(combineReducers({
             ...asyncReducers,
@@ -28,8 +28,7 @@ export default (store, asyncReducers = {}) => {
             }
             return state;
         };
-        store.injectReducer(model.ns, reducer);
-
+        injectReducer(model.ns, reducer);
         const actions = {ns: model.ns};
         Object.keys(model.actions).forEach((key) => {
             const originFn = model.actions[key];
