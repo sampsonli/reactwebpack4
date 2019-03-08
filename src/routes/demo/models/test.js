@@ -5,7 +5,7 @@ const model = {
     ns: 'test',
     state: {
         newsList: null,
-        abc: 123,
+        abc: 12333,
     },
     mutations: {
         setNewsList(state, list) {
@@ -26,7 +26,6 @@ const model = {
             } catch (e) {
                 console.error(e.message);
             }
-
         },
         getUserInfo({commit}, payload) {
             commit('changeAbc', payload);
