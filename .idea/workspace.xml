@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5fc7af75-2c60-40fa-ae9b-a9f942a3ce26" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/demo/models/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/demo/models/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/demo/pages/scroll/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/demo/pages/scroll/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/helper.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -74,7 +72,7 @@
           <entry key="css" value="393" />
           <entry key="ejs" value="1" />
           <entry key="gitignore" value="14" />
-          <entry key="js" value="9280" />
+          <entry key="js" value="9281" />
           <entry key="json" value="11" />
           <entry key="less" value="156" />
           <entry key="md" value="658" />
@@ -86,7 +84,7 @@
           <entry key="CSS" value="393" />
           <entry key="EJS" value="1" />
           <entry key="JSON" value="189" />
-          <entry key="JavaScript" value="9280" />
+          <entry key="JavaScript" value="9281" />
           <entry key="Less" value="156" />
           <entry key="Markdown" value="658" />
           <entry key="PLAIN_TEXT" value="15" />
@@ -105,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/demo/pages/scroll/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            <state relative-caret-position="308">
+              <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#149#188#0" expanded="true" />
@@ -127,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/demo/models/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="270">
+              <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -142,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+            <state relative-caret-position="306">
+              <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -278,9 +276,9 @@
         <option value="$PROJECT_DIR$/src/index.ejs" />
         <option value="$PROJECT_DIR$/deploy.sh" />
         <option value="$PROJECT_DIR$/deploy2.sh" />
-        <option value="$PROJECT_DIR$/src/routes/demo/pages/scroll/index.js" />
         <option value="$PROJECT_DIR$/src/store/helper.js" />
         <option value="$PROJECT_DIR$/src/routes/demo/models/test.js" />
+        <option value="$PROJECT_DIR$/src/routes/demo/pages/scroll/index.js" />
       </list>
     </option>
   </component>
@@ -525,19 +523,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177886000" />
+    <option name="totallyTimeSpent" value="178761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46300212" visible="true" weight="0.17833553" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46356276" visible="true" weight="0.17833553" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" id="npm" order="2" sideWeight="0.5369979" side_tool="true" visible="true" weight="0.17833553" />
+      <window_info id="npm" order="2" sideWeight="0.5364373" side_tool="true" visible="true" weight="0.17833553" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33002833" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33002833" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -545,7 +543,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32719547" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.30028328" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30028328" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -873,30 +871,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/demo/pages/scroll/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#149#188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+        <state relative-caret-position="306">
+          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/demo/models/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="270">
+          <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/demo/pages/scroll/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#149#188#0" expanded="true" />
           </folding>
         </state>
       </provider>

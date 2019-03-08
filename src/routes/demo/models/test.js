@@ -5,7 +5,7 @@ const model = {
     ns: 'test',
     state: {
         newsList: null,
-        abc: 'hello world',
+        abc: 'hello world lichun',
     },
     mutations: {
         setNewsList(state, list) {
