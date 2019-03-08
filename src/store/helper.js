@@ -36,7 +36,7 @@ export default (store, asyncReducers = {}) => {
             const originFn = model.actions[key];
             actions[key] = (payload) => {
                 const state = store.getState();
-                return originFn({
+                return originFn(payload, {
                     state: state[model.ns],
                     rootState: state,
                     commit: (mt, pd) => {
@@ -47,7 +47,7 @@ export default (store, asyncReducers = {}) => {
                         }
                     },
                     actions,
-                }, payload);
+                });
             };
         });
         return actions; // eslint-disable-line

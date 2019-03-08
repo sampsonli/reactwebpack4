@@ -16,9 +16,9 @@ const model = {
         },
     },
     actions: {
-        async getNewsList({commit}, type) {
+        async getNewsList(payload, {commit}) {
             try {
-                const info = await ajax.get(`/news/${type || ''}`);
+                const info = await ajax.get(`/news/${payload || ''}`);
                 if (info.stat === '1') {
                     commit('setNewsList', info.data);
                     return info.data;
@@ -26,10 +26,9 @@ const model = {
             } catch (e) {
                 console.error(e.message);
             }
-
         },
-        getUserInfo({commit}, payload) {
-            commit('changeAbc', payload);
+        getUserInfo({num}, {commit} = null) {
+            commit('changeAbc', num);
         },
     },
 };
