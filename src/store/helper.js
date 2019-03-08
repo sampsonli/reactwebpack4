@@ -34,9 +34,12 @@ export default (store, asyncReducers = {}) => {
         const actions = {};
         Object.keys(model.actions).forEach((key) => {
             const originFn = model.actions[key];
-            actions[key] = (payload) => {
+            actions[key] = (payload, test) => {
+                if (test) {
+                    throw new Error('参数传递错误， 不能传多个参数， 建议全部参数放入第一个参数中');
+                }
                 const state = store.getState();
-                return originFn(payload, {
+                const avatar = {
                     state: state[model.ns],
                     rootState: state,
                     commit: (mt, pd) => {
@@ -47,7 +50,8 @@ export default (store, asyncReducers = {}) => {
                         }
                     },
                     actions,
-                });
+                };
+                return originFn.bind(avatar)(payload, avatar);
             };
         });
         return actions; // eslint-disable-line

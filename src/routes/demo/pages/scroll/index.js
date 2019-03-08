@@ -18,7 +18,7 @@ class ScrollDemo extends Component {
         super(args);
         const {stat: {newsList}} = this.props;
         if (!newsList) {
-            action.getNewsList().then(() => {
+            action.getNewsList(11).then(() => {
                 setTimeout(() => {
                     this.initScroll();
                 }, 16.7);
