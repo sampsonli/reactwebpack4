@@ -3,12 +3,12 @@ import P from 'prop-types';
 import { connect } from 'react-redux';
 // import classNames from 'classnames';
 import IScroll from '~/common/iscroll';
-import action, {ns} from '../../models/test';
+import model from '../../models/test';
 import style from './style.less';
 
 
 export default
-@connect(state => ({ stat: state[ns] }))
+@connect(state => ({ stat: state[model.ns] }))
 class ScrollDemo extends Component {
     static propTypes = {
         stat: P.objectOf(P.any).isRequired,
@@ -18,7 +18,7 @@ class ScrollDemo extends Component {
         super(args);
         const {stat: {newsList}} = this.props;
         if (!newsList) {
-            action.getNewsList(11).then(() => {
+            model.getNewsList(11).then(() => {
                 setTimeout(() => {
                     this.initScroll();
                 }, 16.7);
@@ -46,7 +46,7 @@ class ScrollDemo extends Component {
 
     changeColor = () => {
         const num = Math.random() * 1000000;
-        action.getUserInfo(num);
+        model.getUserInfo(num);
     }
 
     jumpUrl = (url) => {

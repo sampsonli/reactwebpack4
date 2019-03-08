@@ -5,7 +5,7 @@ const model = {
     ns: 'test',
     state: {
         newsList: null,
-        abc: '李春',
+        abc: '李春1',
     },
     mutations: {
         setNewsList(state, list) {
@@ -29,10 +29,8 @@ const model = {
             return null;
         },
         getUserInfo(num) {
-            console.log('hello3');
             this.commit('changeAbc', num);
         },
     },
 };
-export const {ns} = model;
 export default store.connect(model);

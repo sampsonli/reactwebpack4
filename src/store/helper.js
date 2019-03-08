@@ -30,7 +30,7 @@ export default (store, asyncReducers = {}) => {
         };
         store.injectReducer(model.ns, reducer);
 
-        const actions = {};
+        const actions = {ns: model.ns};
         Object.keys(model.actions).forEach((key) => {
             const originFn = model.actions[key];
             actions[key] = (payload, test) => {

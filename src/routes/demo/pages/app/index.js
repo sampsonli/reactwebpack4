@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import Scroll from '~/common/scroll';
 
 import style from './style.css';
-import action, {ns} from '../../models/test';
+import model from '../../models/test';
 
 export default
-@connect(state => ({ stat: state[ns] }))
+@connect(state => ({ stat: state[model.ns] }))
 class App extends Component {
     static propTypes = {
         stat: P.objectOf(P.any).isRequired,
@@ -65,7 +65,7 @@ class App extends Component {
 
     changeColor = () => {
         const num = Math.random() * 1000000;
-        action.getUserInfo(num);
+        model.getUserInfo(num);
     }
 
     render() {
