@@ -46,7 +46,7 @@ class ScrollDemo extends Component {
 
     changeColor = () => {
         const num = Math.random() * 1000000;
-        action.getUserInfo({ num });
+        action.getUserInfo(num);
     }
 
     jumpUrl = (url) => {

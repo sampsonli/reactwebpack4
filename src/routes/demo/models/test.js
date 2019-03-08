@@ -5,7 +5,7 @@ const model = {
     ns: 'test',
     state: {
         newsList: null,
-        abc: 'hello world lichun',
+        abc: '李春',
     },
     mutations: {
         setNewsList(state, list) {
@@ -28,7 +28,8 @@ const model = {
             }
             return null;
         },
-        getUserInfo({num}) {
+        getUserInfo(num) {
+            console.log('hello3');
             this.commit('changeAbc', num);
         },
     },

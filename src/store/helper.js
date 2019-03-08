@@ -14,9 +14,8 @@ export default (store, asyncReducers = {}) => {
             console.error('model 不符合规范，至少需要包含ns,mutations,actions 字段');
             return;
         }
-        if (asyncReducers[model.ns]) {
-            console.error('模块命名重复，可能会引发未知错误, 开发环境可以忽略');
-            // return;
+        if (asyncReducers[model.ns] && !module.hot) {
+            console.error('模块命名重复，可能会引发未知错误');
         }
         const mutations = {};
         Object.keys(model.mutations).forEach((key) => {
