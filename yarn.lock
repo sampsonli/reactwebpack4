@@ -4206,9 +4206,9 @@ react-router@^4.3.1:
     prop-types "^15.6.1"
     warning "^4.0.1"
 
-react-spirits@^1.0.1:
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/react-spirits/download/react-spirits-1.0.1.tgz#dd8b2ca33110f0294b9b4950d910fca7962200bf"
+react-spirits@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/react-spirits/download/react-spirits-1.0.2.tgz#52f58bb3ee0a13a3d81d873b045206386b8541fb"
 
 react@^16.7.0:
   version "16.7.0"

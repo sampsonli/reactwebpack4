@@ -1,4 +1,4 @@
-import store from '~/store';
+import {connect} from 'react-spirits';
 import ajax from '../common/ajax';
 
 const model = {
@@ -33,4 +33,4 @@ const model = {
         },
     },
 };
-export default store.connect(model);
+export default connect(model);
