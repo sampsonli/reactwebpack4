@@ -1,7 +1,7 @@
 import {connect} from 'react-spirits';
 import ajax from '../common/ajax';
 
-const model = {
+export default connect({
     ns: 'test',
     state: {
         newsList: null,
@@ -32,5 +32,4 @@ const model = {
             this.commit('changeAbc', num);
         },
     },
-};
-export default connect(model);
+});

@@ -1,8 +1,7 @@
-// import 'core-js/shim';
-import 'core-js/modules/es6.set';
-import 'core-js/modules/es6.map';
-import 'core-js/modules/es6.object.assign';
-import 'core-js/modules/es6.promise';
+import 'core-js/modules/es.set';
+import 'core-js/modules/es.map';
+import 'core-js/modules/es.object.assign';
+import 'core-js/modules/es.promise';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

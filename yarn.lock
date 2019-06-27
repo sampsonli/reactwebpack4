@@ -1739,10 +1739,10 @@ core-js-pure@3.1.4:
   resolved "https://registry.npm.taobao.org/core-js-pure/download/core-js-pure-3.1.4.tgz#5fa17dc77002a169a3566cc48dc774d2e13e3769"
   integrity sha1-X6F9x3ACoWmjVmzEjcd00uE+N2k=
 
-core-js@^2.6.9:
-  version "2.6.9"
-  resolved "https://registry.npm.taobao.org/core-js/download/core-js-2.6.9.tgz#6b4b214620c834152e179323727fc19741b084f2"
-  integrity sha1-a0shRiDINBUuF5Mjcn/Bl0GwhPI=
+core-js@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.1.4.tgz#3a2837fc48e582e1ae25907afcd6cf03b0cc7a07"
+  integrity sha1-Oig3/EjlguGuJZB6/NbPA7DMegc=
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -2300,9 +2300,9 @@ eslint-plugin-node@^9.1.0:
     semver "^6.1.0"
 
 eslint-plugin-promise@^4.0.1:
-  version "4.1.1"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-promise/download/eslint-plugin-promise-4.1.1.tgz#1e08cb68b5b2cd8839f8d5864c796f56d82746db"
-  integrity sha1-HgjLaLWyzYg5+NWGTHlvVtgnRts=
+  version "4.2.1"
+  resolved "https://registry.npm.taobao.org/eslint-plugin-promise/download/eslint-plugin-promise-4.2.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint-plugin-promise%2Fdownload%2Feslint-plugin-promise-4.2.1.tgz#845fd8b2260ad8f82564c1222fce44ad71d9418a"
+  integrity sha1-hF/YsiYK2PglZMEiL85ErXHZQYo=
 
 eslint-plugin-react@^7.12.3:
   version "7.14.2"
@@ -3846,7 +3846,7 @@ mime@1.6.0, mime@^1.4.1:
   resolved "https://registry.npm.taobao.org/mime/download/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
   integrity sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=
 
-mime@^2.0.3, mime@^2.4.2:
+mime@^2.4.2, mime@^2.4.4:
   version "2.4.4"
   resolved "https://registry.npm.taobao.org/mime/download/mime-2.4.4.tgz#bd7b91135fc6b01cde3e9bae33d659b63d8857e5"
   integrity sha1-vXuRE1/GsBzePpuuM9ZZtj2IV+U=
@@ -4911,10 +4911,10 @@ react-router@5.0.1:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-spirits@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.npm.taobao.org/react-spirits/download/react-spirits-1.0.3.tgz#f02f299dc0d563f57d56550b908c94d033e530b8"
-  integrity sha1-8C8pncDVY/V9VlULkIyU0DPlMLg=
+react-spirits@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.npm.taobao.org/react-spirits/download/react-spirits-2.0.9.tgz?cache=0&sync_timestamp=1561628864094&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-spirits%2Fdownload%2Freact-spirits-2.0.9.tgz#698b4bef1a5e361aed20c5de3e6c2513fe360ca7"
+  integrity sha1-aYtL7xpeNhrtIMXePmwlE/42DKc=
 
 react@^16.7.0:
   version "16.8.6"
@@ -5940,12 +5940,12 @@ urix@^0.1.0:
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
 url-loader@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/url-loader/download/url-loader-2.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Furl-loader%2Fdownload%2Furl-loader-2.0.0.tgz#600ef36f463e21bd673ad70156d850619d9cd092"
-  integrity sha1-YA7zb0Y+Ib1nOtcBVthQYZ2c0JI=
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/url-loader/download/url-loader-2.0.1.tgz?cache=0&sync_timestamp=1561461890706&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Furl-loader%2Fdownload%2Furl-loader-2.0.1.tgz#6c47fc7090e3d48939e01fe3c6efcba5938dcec5"
+  integrity sha1-bEf8cJDj1Ik54B/jxu/LpZONzsU=
   dependencies:
     loader-utils "^1.1.0"
-    mime "^2.0.3"
+    mime "^2.4.4"
     schema-utils "^1.0.0"
 
 url@^0.11.0:
