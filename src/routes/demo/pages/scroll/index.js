@@ -6,7 +6,6 @@ import IScroll from '~/common/iscroll';
 import model from '../../models/test';
 import style from './style.less';
 
-
 export default
 @connect(state => ({ stat: state[model.ns] }))
 class ScrollDemo extends Component {

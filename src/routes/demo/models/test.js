@@ -16,6 +16,10 @@ export default connect({
         },
     },
     actions: {
+        adddd(payload, context) {
+            console.log('hello');
+            context.commit('hello');
+        },
         async getNewsList() {
             try {
                 const info = await ajax.get(`/news/${''}`);
