@@ -65,7 +65,7 @@ class App extends Component {
 
     changeColor = () => {
         const num = Math.random() * 1000000;
-        model.getUserInfo(num);
+        model.act.getNewsList(num);
     }
 
     render() {

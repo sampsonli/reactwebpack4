@@ -7,16 +7,16 @@ export default connect({
         newsList: null,
         abc: '李春李春',
     },
-    mutations: {
-        setNewsList(state, list) {
-            state.abc = 11;
-            state.newsList = list;
+    mt: {
+        setNewsList(list) {
+            this.newsList = list;
         },
-        changeAbc(state, payload) {
-            state.abc = payload;
+        changeAbc(payload) {
+            this.abc = payload;
+            // this.
         },
     },
-    actions: {
+    act: {
         async getNewsList() {
             try {
                 const info = await ajax.get(`/news/${''}`);
@@ -31,6 +31,7 @@ export default connect({
         },
         getUserInfo(num) {
             this.commit('changeAbc', num);
+
         },
     },
 });

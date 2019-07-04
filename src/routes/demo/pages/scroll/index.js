@@ -17,7 +17,7 @@ class ScrollDemo extends Component {
         super(args);
         const {stat: {newsList}} = this.props;
         if (!newsList) {
-            model.getNewsList(11).then(() => {
+            model.act.getNewsList(11).then(() => {
                 setTimeout(() => {
                     this.initScroll();
                 }, 16.7);
@@ -44,7 +44,9 @@ class ScrollDemo extends Component {
     }
 
     changeColor = () => {
-        model.getUserInfo(123);
+        // model.act.getUserInfo(123);
+        // model.mt.changeAbc('hello');
+        model.act.getUserInfo(333);
     }
 
     jumpUrl = (url) => {
