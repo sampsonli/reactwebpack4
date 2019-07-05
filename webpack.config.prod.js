@@ -32,14 +32,7 @@ module.exports = {
                 include: /(node_modules|assets)/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    {
-                        loader: "css-loader",
-                        options: {
-                            modules: {
-                                localIdentName: '[local]-[hash:base64:5]'
-                            },
-                        }
-                    },
+                    'css-loader',
                     'postcss-loader',
                     'less-loader',
                 ],
@@ -51,12 +44,12 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
-                        loader: "css-loader",
+                        loader: 'css-loader',
                         options: {
                             modules: {
-                                localIdentName: '[local]-[hash:base64:5]'
+                                localIdentName: '[local]-[hash:base64:5]',
                             },
-                        }
+                        },
                     },
                     'postcss-loader',
                     'less-loader',
