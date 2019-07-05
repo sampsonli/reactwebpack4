@@ -17,7 +17,7 @@ class ScrollDemo extends Component {
         super(args);
         const {stat: {newsList}} = this.props;
         if (!newsList) {
-            model.act.getNewsList(11).then(() => {
+            model.act.getNewsList().then(() => {
                 setTimeout(() => {
                     this.initScroll();
                 }, 16.7);
@@ -58,7 +58,10 @@ class ScrollDemo extends Component {
         return (
             <div className={`l-full l-flex-column ${style.wrapper}`}>
                 <div className={style.header} onClick={this.changeColor}>
-                    <span>新闻头条-{stat.abc}</span>
+                    <span>
+                        新闻头条-
+                        {stat.abc}
+                    </span>
                 </div>
                 <div className="l-flex-1 l-relative">
                     <div className="l-full" id="wrapper">
