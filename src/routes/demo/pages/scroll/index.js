@@ -46,7 +46,7 @@ class ScrollDemo extends Component {
     changeColor = () => {
         // model.act.getUserInfo(123);
         // model.mt.changeAbc('hello');
-        model.act.getUserInfo(333);
+        model.act.getUserInfo(Math.floor(Math.random() * 1000));
     }
 
     jumpUrl = (url) => {

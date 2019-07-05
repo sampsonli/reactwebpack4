@@ -31,6 +31,7 @@ export default connect({
         },
         getUserInfo(num) {
             this.commit('changeAbc', num);
+            console.log('hello world2');
 
         },
     },
