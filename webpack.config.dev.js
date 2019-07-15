@@ -47,12 +47,12 @@ module.exports = {
                 use: [
                     'style-loader',
                     {
-                        loader: "css-loader",
+                        loader: 'css-loader',
                         options: {
                             modules: {
-                                localIdentName: '[local]-[hash:base64:5]'
+                                localIdentName: '[local]-[hash:base64:5]',
                             },
-                        }
+                        },
                     },
                     'postcss-loader',
                     'less-loader',
@@ -80,7 +80,7 @@ module.exports = {
                         loader: 'url-loader',
                         options: {
                             limit: 8192,
-                            name: 'assets/[name].[hash:6].[ext]'
+                            name: 'assets/[name].[hash:6].[ext]',
                         },
                     },
                 ],

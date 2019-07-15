@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import P from 'prop-types';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 // import classNames from 'classnames';
 import IScroll from '~/common/iscroll';
 import model from '../../models/test';
 import style from './style.less';
 
-export default
-@connect(state => ({ stat: state[model.ns] }))
+export default @connect(state => ({stat: state[model.ns]}))
 class ScrollDemo extends Component {
     static propTypes = {
         stat: P.objectOf(P.any).isRequired,
     }
+
 
     constructor(args) {
         super(args);
@@ -25,6 +25,9 @@ class ScrollDemo extends Component {
         }
     }
 
+    state = {
+        index: 0,
+    }
 
     componentDidMount() {
         this.initScroll();
@@ -55,32 +58,38 @@ class ScrollDemo extends Component {
 
     render() {
         const {stat} = this.props;
+        const {index} = this.state;
         return (
             <div className={`l-full l-flex-column ${style.wrapper}`}>
                 <div className={style.header} onClick={this.changeColor}>
                     <span>
                         新闻头条-
                         {stat.abc}
+-
+                        {index}
                     </span>
                 </div>
                 <div className="l-flex-1 l-relative">
                     <div className="l-full" id="wrapper">
                         {stat.newsList
-                            && (
-                                <ul className={style.list} id="target">
-                                    {stat.newsList.map(item => (
-                                        <li onClick={() => this.jumpUrl(item.url)} key={item.uniquekey} className={style.item}>
-                                            <div className={style.title}>
-                                                {item.title}
-                                                <br />
-                                                {item.date}
-                                            </div>
-                                            <div className={style.imgct}><img alt="" src={item.thumbnail_pic_s} /></div>
+                        && (
+                            <ul className={style.list} id="target">
+                                {stat.newsList.map(item => (
+                                    <li onClick={() => this.jumpUrl(item.url)}
+                                        key={item.uniquekey}
+                                        className={style.item}
+                                    >
+                                        <div className={style.title}>
+                                            {item.title}
+                                            <br />
+                                            {item.date}
+                                        </div>
+                                        <div className={style.imgct}><img alt="" src={item.thumbnail_pic_s} /></div>
 
-                                        </li>
-                                    ))}
-                                </ul>
-                            ) || <div className="empty l-full l-box-center">加载中...</div>}
+                                    </li>
+                                ))}
+                            </ul>
+                        ) || <div className="empty l-full l-box-center">加载中...</div>}
                     </div>
 
                 </div>

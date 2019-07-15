@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>点击购买</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .weixin-tip {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            filter: alpha(opacity=80);
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+        }
+        .weixin-tip p {
+            text-align: center;
+            margin-top: 10%;
+            padding: 0 5%;
+        }
+    </style>
+</head>
+<body>
+<div class="weixin-tip">
+    <p>
+        <img src="live_weixin.png" alt="微信打开"/>
+    </p>
+</div>
+<script type="text/javascript">
+    var ua = navigator.userAgent.toLowerCase();
+    if (/MicroMessenger/i.test(ua)) {
+        document.querySelector('.weixin-tip').style.display = 'block';
+    } else {
+        var qs = {};
+        if(window.location.search) {
+            window.location.search.split('?')[1].split('&').forEach(function (item) {
+                qs[item.split('=')[0]] = item.split('=')[1]
+            })
+        }
+        if(qs.url) {
+            location.href = decodeURIComponent(qs.url)
+        }
+    }
+</script>
+</body>
+</html>
