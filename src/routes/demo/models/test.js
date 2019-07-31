@@ -5,7 +5,7 @@ export default connect({
     ns: 'test',
     state: {
         newsList: null,
-        abc: '李春李春',
+        abc: 0,
     },
     mt: {
         setNewsList(list) {
@@ -18,19 +18,13 @@ export default connect({
     },
     act: {
         async getNewsList() {
-            try {
-                const info = await ajax.get(`/news/${''}`);
-                if (info.stat === '1') {
-                    this.commit('setNewsList', info.data);
-                    return info.data;
-                }
-            } catch (e) {
-                console.error(e.message);
-            }
-            return null;
+
         },
         getUserInfo(num) {
             this.commit('changeAbc', num);
         },
     },
+    init () {
+        console.log('init');
+    }
 });
