@@ -24,7 +24,4 @@ export default connect({
             this.commit('changeAbc', num);
         },
     },
-    init () {
-        console.log('init');
-    }
 });

@@ -9,7 +9,7 @@ const routes = [];
         const md = {component: r(key).default, path: `/${key.split('/')[2]}`};
         routes.push(md);
     });
-})(require.context('./', true, /\.\/routes\/[^\/]+\/index\.js$/)); // eslint-disable-line
+})(require.context('./', true, /\.\/routes\/[^/]+\/index\.js$/));
 require.context('./', true, /^\.\/(common|components).*\.js$/);
 
 export default () => (
