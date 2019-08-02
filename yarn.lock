@@ -5037,10 +5037,10 @@ react-router@5.0.1:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-spirits@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.npm.taobao.org/react-spirits/download/react-spirits-3.0.6.tgz?cache=0&sync_timestamp=1562292103280&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-spirits%2Fdownload%2Freact-spirits-3.0.6.tgz#21ac6a77988342b14649b6266afe8149d7091fab"
-  integrity sha1-Iaxqd5iDQrFGSbYmav6BSdcJH6s=
+react-spirits@^3.0.7:
+  version "3.0.7"
+  resolved "https://registry.npm.taobao.org/react-spirits/download/react-spirits-3.0.7.tgz?cache=0&sync_timestamp=1564572049025&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-spirits%2Fdownload%2Freact-spirits-3.0.7.tgz#f7b7fb2bfe5c27624d79f516b90399ab6b8d962b"
+  integrity sha1-97f7K/5cJ2JNefUWuQOZq2uNlis=
 
 react@^16.7.0:
   version "16.8.6"

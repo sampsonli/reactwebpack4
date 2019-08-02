@@ -17,8 +17,11 @@ export default connect({
         },
     },
     act: {
+        _init() {
+            console.log(this.state);
+        },
         async getNewsList() {
-
+            console.log(this.state);
         },
         getUserInfo(num) {
             this.commit('changeAbc', num);
