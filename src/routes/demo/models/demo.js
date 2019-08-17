@@ -11,18 +11,18 @@ class Demo {
         return `${this.name}-2--${this.age}`;
     }
 
-    @action addAge() {
+    @action addAge = () => {
         this.age++;
     }
 
-    @action setFriend() {
+    @action setFriend = () => {
         this.friend = {
             name: 'hello',
             age: 111111,
         };
     }
 
-    @action changeFriendName() {
+    @action changeFriendName = () => {
         if (this.friend) {
             this.friend.name = 'welcome';
         }
