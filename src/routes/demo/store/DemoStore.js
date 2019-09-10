@@ -1,6 +1,8 @@
 import {observable, action, computed} from 'mobx';
 
-class Demo {
+let instance;
+export default
+class DemoStore {
     name = 'lichun';
 
     @observable age = 11;
@@ -27,5 +29,11 @@ class Demo {
             this.friend.name = 'welcome';
         }
     }
+
+    static getInstance = () => {
+        if (!instance) {
+            instance = new DemoStore();
+        }
+        return instance;
+    }
 }
-export default new Demo();
