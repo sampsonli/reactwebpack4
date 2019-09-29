@@ -17,7 +17,7 @@ export default observer(({history}) => {
                 </span>
             </div>
             <div className={style.user_input}>
-                <input value={key} onChange={(e) => setKey(e.target.value)} />
+                <input value={key} placeholder="请输入要查找的公司名字" onChange={(e) => setKey(e.target.value)} />
                 <button onClick={() => store.getCompList({key})}>查询</button>
             </div>
             <div className="l-flex-1 l-relative">
