@@ -1,0 +1,61 @@
+.wrapper {
+  touch-action: none;
+}
+.header {
+  height: .5rem;
+  background-color: red;
+  line-height: .5rem;
+  text-align: center;
+  font-size: .2rem;
+  color: white;
+}
+.user_input {
+  text-align: center;
+  padding: .2rem 0;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  input, button {
+    height: .3rem;
+  }
+}
+.comp_list {
+  .comp_item {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding: .2rem;
+    .comp_name {
+      em {
+        color: red;
+      }
+    }
+  }
+
+}
+
+.item {
+  height: 1rem;
+  background-color: pink;
+  .title {
+    width: 2rem;
+    float: left;
+  }
+  .imgct {
+    width: 1.75rem;
+    float: right;
+    height: 1rem;
+    line-height: 1rem;
+
+    img {
+      width: 1.6rem;
+      max-height: .8rem;
+      vertical-align: middle;
+    }
+
+  }
+
+}
+.item:nth-child(2n) {
+  background-color: orange;
+}
+
+.list {
+  /*transition: 2s;*/
+}

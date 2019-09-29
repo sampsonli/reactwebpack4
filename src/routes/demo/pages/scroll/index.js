@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import P from 'prop-types';
 
 import {observer} from 'mobx-react';
 import style from './style.less';
@@ -7,10 +6,10 @@ import DemoStore from '../../store/DemoStore';
 
 const store = DemoStore.getInstance();
 export default observer(() => {
-    const [count, addCount] = useState(0);
+    const [count, setCount] = useState(0);
     useEffect(() => {
         console.log(count, '变了');
-    }, [])
+    }, []);
     return (
         <div className={`l-full l-flex-column ${style.wrapper}`}>
             <div className={style.header} onClick={store.setFriend}>
@@ -34,11 +33,11 @@ export default observer(() => {
                         </div>
                     )}
                     <button type="button" onClick={store.addAge}>年龄+1</button>
-                    <button type="button" onClick={() => addCount(count + 1)}>数字+1</button>
+                    <button type="button" onClick={() => setCount(count + 1)}>数字+1</button>
                 </div>
 
             </div>
 
         </div>
     );
-})
+});
