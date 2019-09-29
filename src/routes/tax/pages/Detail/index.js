@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 
 import {observer} from 'mobx-react';
 import style from './style.less';
@@ -9,8 +9,11 @@ export default observer(({location}) => {
     useEffect(() => {
         const keyno = location.search.split('keyno=')[1].split('&')[0];
         store.getTaxDetail({keyno});
+        return () => {
+            store.detail = null;
+        };
     }, [location.search]);
-    const detail = store.detail
+    const {detail} = store;
     return (
         <div className={`l-full l-flex-column ${style.wrapper}`}>
             <div className={style.header}>

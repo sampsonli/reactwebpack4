@@ -21,7 +21,6 @@ class TaxStore {
     }
 
     @action getTaxDetail = async ({keyno}) => {
-        this.detail = null;
         const info = await axios.get(`https://www.qichacha.com/tax_getCompanyBank?keyno=${keyno}&user_id=8461cd3ed931cd0bcffef88984ffd7f0`);
         if (info.status === 200) {
             runInAction(() => {
