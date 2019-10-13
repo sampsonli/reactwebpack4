@@ -1,6 +1,6 @@
 
 import {
-    observable, action, computed, runInAction,
+    observable, action, runInAction,
 } from 'mobx';
 import axios from 'axios';
 
