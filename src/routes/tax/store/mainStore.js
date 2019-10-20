@@ -9,8 +9,10 @@ class MainStore {
 
     @observable detail = null;
 
-    @action getCompList = async ({key}) => {
-        const info = await axios.get(`https://www.qichacha.com/tax_getList?key=${key}&user_id=8461cd3ed931cd0bcffef88984ffd7f0`);
+    @observable key = '';
+
+    @action getCompList = async () => {
+        const info = await axios.get(`https://www.qichacha.com/tax_getList?key=${this.key}&user_id=8461cd3ed931cd0bcffef88984ffd7f0`);
         if (info.status === 200) {
             runInAction(() => {
                 this.list = info.data;
