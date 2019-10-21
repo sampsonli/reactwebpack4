@@ -4,9 +4,7 @@ import {
 } from 'mobx';
 import axios from 'axios';
 
-let instance;
-export default
-class TaxStore {
+class MainStore {
     @observable list = null;
 
     @observable detail = null;
@@ -28,12 +26,5 @@ class TaxStore {
             });
         }
     }
-
-
-    static getInstance = () => {
-        if (!instance) {
-            instance = new TaxStore();
-        }
-        return instance;
-    }
 }
+export default new MainStore();

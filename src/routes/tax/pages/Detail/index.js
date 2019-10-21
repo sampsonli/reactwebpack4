@@ -2,9 +2,8 @@ import React, {useEffect} from 'react';
 
 import {observer} from 'mobx-react';
 import style from './style.less';
-import TaxStore from '../../store/TaxStore';
+import store from '../../store/mainStore';
 
-const store = TaxStore.getInstance();
 export default observer(({location}) => {
     useEffect(() => {
         const keyno = location.search.split('keyno=')[1].split('&')[0];

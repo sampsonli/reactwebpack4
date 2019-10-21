@@ -2,9 +2,8 @@ import React, {useState, useEffect} from 'react';
 
 import {observer} from 'mobx-react';
 import style from './style.less';
-import TaxStore from '../../store/TaxStore';
+import store from '../../store/mainStore';
 
-const store = TaxStore.getInstance();
 export default observer(({history}) => {
     const [key, setKey] = useState('');
     useEffect(() => {
