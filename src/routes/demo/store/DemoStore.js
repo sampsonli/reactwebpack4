@@ -5,7 +5,7 @@ import {
 class DemoStore {
     ns = 'demoStore';
 
-    @observable age = 222;
+    @observable age = 11;
 
     @action addAge = () => {
         this.age++;
@@ -13,13 +13,11 @@ class DemoStore {
 
     constructor() {
         if (module.hot) {
-            const store = window[this.ns] && JSON.parse(window[this.ns]);
-            Object.assign(this, store);
-            reaction(() => JSON.stringify(this), () => {
-                window[this.ns] = JSON.stringify(this);
+            Object.assign(this, window[this.ns] && JSON.parse(window[this.ns]));
+            reaction(() => JSON.stringify({age: this.age}), (obj) => {
+                window[this.ns] = obj;
             });
         }
     }
 }
-const store = new DemoStore();
-export default store;
+export default new DemoStore();

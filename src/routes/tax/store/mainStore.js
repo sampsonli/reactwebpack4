@@ -1,10 +1,12 @@
 
 import {
-    observable, action, runInAction,
+    observable, action, runInAction, reaction,
 } from 'mobx';
 import axios from 'axios';
 
 class MainStore {
+    ns = 'mainStore';
+
     @observable list = null;
 
     @observable detail = null;
@@ -23,6 +25,15 @@ class MainStore {
         if (info.status === 200) {
             runInAction(() => {
                 this.detail = info.data;
+            });
+        }
+    }
+
+    constructor() {
+        if (module.hot) {
+            Object.assign(this, window[this.ns] && JSON.parse(window[this.ns]));
+            reaction(() => JSON.stringify({list: this.list, detail: this.detail}), (obj) => {
+                window[this.ns] = obj;
             });
         }
     }
