@@ -1,39 +1,23 @@
-import {observable, action, computed} from 'mobx';
+import {
+    observable, action, reaction,
+} from 'mobx';
 
-let instance;
-export default
 class DemoStore {
-    name = 'lichun';
+    ns = 'demoStore';
 
     @observable age = 11;
-
-    @observable friend = null;
-
-    @computed get total() {
-        return `${this.name}-2--${this.age}`;
-    }
 
     @action addAge = () => {
         this.age++;
     }
 
-    @action setFriend = () => {
-        this.friend = {
-            name: 'hello',
-            age: 111111,
-        };
-    }
-
-    @action changeFriendName = () => {
-        if (this.friend) {
-            this.friend.name = 'welcome';
+    constructor() {
+        if (module.hot) {
+            Object.assign(this, window[this.ns] && JSON.parse(window[this.ns]));
+            reaction(() => JSON.stringify({age: this.age}), (obj) => {
+                window[this.ns] = obj;
+            });
         }
-    }
-
-    static getInstance = () => {
-        if (!instance) {
-            instance = new DemoStore();
-        }
-        return instance;
     }
 }
+export default new DemoStore();

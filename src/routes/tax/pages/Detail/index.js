@@ -33,6 +33,10 @@ export default observer(({location}) => {
                                 {detail.Address}
                             </li>
                             <li className={style.info_item}>
+                                <span className={style.info_key}>纳税人识别号：</span>
+                                {detail.CreditCode}
+                            </li>
+                            <li className={style.info_item}>
                                 <span className={style.info_key}>开户行：</span>
                                 {detail.Bank}
                             </li>
