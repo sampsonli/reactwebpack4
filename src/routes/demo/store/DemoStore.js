@@ -3,7 +3,7 @@ import {
 } from 'mobx';
 
 class DemoStore {
-    ns = 'demoStore';
+
 
     @observable age = 11;
 
@@ -13,9 +13,10 @@ class DemoStore {
 
     constructor() {
         if (module.hot) {
-            Object.assign(this, window[this.ns] && JSON.parse(window[this.ns]));
+            const ns = 'demoStore';
+            Object.assign(this, window[ns] && JSON.parse(window[ns]));
             reaction(() => JSON.stringify({age: this.age}), (obj) => {
-                window[this.ns] = obj;
+                window[ns] = obj;
             });
         }
     }

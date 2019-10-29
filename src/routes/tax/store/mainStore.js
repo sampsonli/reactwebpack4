@@ -1,39 +1,42 @@
 
 import {
-    observable, action, runInAction, reaction,
+    observable, action, reaction,
 } from 'mobx';
 import axios from 'axios';
 
 class MainStore {
-    ns = 'mainStore';
-
     @observable list = null;
 
     @observable detail = null;
 
-    @action getCompList = async ({key}) => {
+    @action setList = (list) => {
+        this.list = list;
+    }
+
+    @action setDetail = (detail) => {
+        this.detail = detail;
+    }
+
+    getCompList = async ({key}) => {
         const info = await axios.get(`https://www.qichacha.com/tax_getList?key=${key}&user_id=8461cd3ed931cd0bcffef88984ffd7f0`);
         if (info.status === 200) {
-            runInAction(() => {
-                this.list = info.data;
-            });
+            this.setList(info.data);
         }
     }
 
-    @action getTaxDetail = async ({keyno}) => {
+    getTaxDetail = async ({keyno}) => {
         const info = await axios.get(`https://www.qichacha.com/tax_getCompanyBank?keyno=${keyno}&user_id=8461cd3ed931cd0bcffef88984ffd7f0`);
         if (info.status === 200) {
-            runInAction(() => {
-                this.detail = info.data;
-            });
+            this.setDetail(info.data);
         }
     }
 
     constructor() {
         if (module.hot) {
-            Object.assign(this, window[this.ns] && JSON.parse(window[this.ns]));
+            const ns = 'mainStore';
+            Object.assign(this, window[ns] && JSON.parse(window[ns]));
             reaction(() => JSON.stringify({list: this.list, detail: this.detail}), (obj) => {
-                window[this.ns] = obj;
+                window[ns] = obj;
             });
         }
     }
