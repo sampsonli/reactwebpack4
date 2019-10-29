@@ -20,7 +20,12 @@ export default observer(() => {
                     <button type="button" onClick={store.addAge}>年龄+1</button>
 
                     <div className={style.wp}>
-                        <div className={style.ct}>hello world111</div>
+                        <div className={style.ct}>
+                            李春 李春 李春 李春 李春 李春 李春 李春 李春
+                            李春 李春 李春 李春 李春 李春 李春 李春 李春
+                            李春 李春 李春 李春 李春 李春 李春 李春 李春
+                            李春 李春 李春 李春 李春 李春 李春 李春 李春
+                        </div>
 
                     </div>
                 </div>
