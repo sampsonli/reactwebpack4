@@ -9,6 +9,11 @@ import ReactDOM from 'react-dom';
 import Router from './router';
 import './assets/common.css';
 
+if (process.env.NODE_ENV === 'development') {
+    // const VConsole = require('vconsole');
+    // const vc = new VConsole();
+    // console.log(vc);
+}
 ReactDOM.render(
     <Router />,
     document.getElementById('app'),

@@ -6,8 +6,6 @@ import store from '../../store/DemoStore';
 
 export default observer(() => {
     useEffect(() => {
-        // store.age = 0
-
     }, []);
     return (
         <div className={`l-full l-flex-column ${style.wrapper}`}>
@@ -20,6 +18,11 @@ export default observer(() => {
             <div className="l-flex-1 l-relative">
                 <div className="l-full" id="wrapper">
                     <button type="button" onClick={store.addAge}>年龄+1</button>
+
+                    <div className={style.wp}>
+                        <div className={style.ct}>hello world111</div>
+
+                    </div>
                 </div>
 
             </div>
