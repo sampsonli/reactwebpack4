@@ -6,7 +6,7 @@ class DemoStore {
     @observable age = 11;
 
     @action addAge = () => {
-        console.log('hello2e3373555')
+        console.log('hello55')
         this.age++;
     }
 

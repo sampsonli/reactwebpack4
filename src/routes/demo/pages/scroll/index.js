@@ -22,9 +22,8 @@ export default observer(() => {
                     <div className={style.wp}>
                         <div className={style.ct}>
                             李春 李春 李春 李春 李春 李春 李春 李春 李春
-                            李春 李春 李春 李春 李春 李春 李春 李春 李春
-                            李春 李春 李春 李春 李春 李春 李春 李春 李春
-                            李春 李春 李春 李春 李春 李春 李春 李春 李春
+
+
                         </div>
 
                     </div>
