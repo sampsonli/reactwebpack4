@@ -31,12 +31,16 @@ class MainStore {
         }
     }
 
+    mounted = () => {
+        console.log('init');
+    }
+
     constructor() {
         if (module.hot) {
+            Object.assign(this, module.hot.data && module.hot.data.entry);
             module.hot.dispose(data => {
-                data.instance = this;
+                data.entry = this;
             });
-            Object.assign(this, module.hot.data.instance);
         }
     }
 }
