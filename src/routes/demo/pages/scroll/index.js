@@ -10,7 +10,7 @@ export default observer(() => {
         <div className={`l-full l-flex-column ${style.wrapper}`}>
             <div className={style.header}>
                 <span>
-                        新闻头条--
+                        新闻头条--2-
                     {store.age}
                 </span>
             </div>

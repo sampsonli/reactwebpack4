@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import loadable from 'react-loadable';
 import P from 'prop-types';
+import load from '../../common/load';
 
-// const App = loadable({ loader: () => import('./pages/app'), loading: () => null });
-const Search = loadable({ loader: () => import('./pages/Search'), loading: () => null });
-const Detail = loadable({ loader: () => import('./pages/Detail'), loading: () => null });
+const Search = load(() => import('./pages/Search'));
+const Detail = load(() => import('./pages/Detail'));
 
 class Tax extends Component {
     render() {

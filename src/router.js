@@ -16,7 +16,7 @@ export default () => (
     <Router>
         <Switch>
             { routes.map(r => <Route key={r.path} component={r.component} path={r.path} />)}
-            <Redirect from="/" to="/tax/search" />
+            <Redirect from="/" to="/demo/scroll" />
         </Switch>
     </Router>
 );
