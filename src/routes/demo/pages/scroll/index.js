@@ -4,13 +4,13 @@ import {observer} from 'mobx-react';
 import style from './style.less';
 import store from '../../store/DemoStore';
 
-export default observer(() => {
-    useEffect(store.mounted, []);
+export default observer((params) => {
+    useEffect(() => store.mounted(params), []);
     return (
         <div className={`l-full l-flex-column ${style.wrapper}`}>
             <div className={style.header}>
                 <span>
-                        新闻头条--2-
+                        新闻头条-----
                     {store.age}
                 </span>
             </div>

@@ -7,8 +7,7 @@ const webpack = require('webpack'); // webpack核心
 const webpackDevMiddleware = require('webpack-dev-middleware'); // webpack服务器
 const webpackHotMiddleware = require('webpack-hot-middleware'); // HMR热更新中间件
 
-const forward = require('forward-request');
-const http = require('http');
+// const forward = require('forward-request');
 const webpackConfig = require('./webpack.config.dev.js'); // webpack开发环境的配置文件
 
 const app = express(); // 实例化express服务

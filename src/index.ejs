@@ -10,10 +10,11 @@
 
     <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
     <script type="text/javascript">
-        function onresize() {
+        function resize() {
             document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + "px";
         }
-        onresize();
+        window.onresize = resize
+        resize();
     </script>
 </head>
 <body>

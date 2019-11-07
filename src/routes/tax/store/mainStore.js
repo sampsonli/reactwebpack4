@@ -39,7 +39,7 @@ class MainStore {
         if (module.hot) {
             Object.assign(this, module.hot.data && module.hot.data.entry);
             module.hot.dispose(data => {
-                data.entry = this;
+                data.entry = JSON.parse(JSON.stringify(this));
             });
         }
     }
