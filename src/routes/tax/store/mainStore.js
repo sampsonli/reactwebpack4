@@ -1,6 +1,6 @@
 
 import {
-    observable, action, reaction,
+    observable, action,
 } from 'mobx';
 import axios from 'axios';
 
@@ -33,11 +33,10 @@ class MainStore {
 
     constructor() {
         if (module.hot) {
-            const ns = 'mainStore';
-            Object.assign(this, window[ns] && JSON.parse(window[ns]));
-            reaction(() => JSON.stringify({list: this.list, detail: this.detail}), (obj) => {
-                window[ns] = obj;
+            module.hot.dispose(data => {
+                data.instance = this;
             });
+            Object.assign(this, module.hot.data.instance);
         }
     }
 }

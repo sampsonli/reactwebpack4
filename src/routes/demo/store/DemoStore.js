@@ -1,24 +1,23 @@
 import {
-    observable, action, reaction,
+    observable, action,
 } from 'mobx';
 
 class DemoStore {
-
-
     @observable age = 11;
 
     @action addAge = () => {
+        console.log('hello2e3373555')
         this.age++;
     }
 
     constructor() {
         if (module.hot) {
-            const ns = 'demoStore';
-            Object.assign(this, window[ns] && JSON.parse(window[ns]));
-            reaction(() => JSON.stringify({age: this.age}), (obj) => {
-                window[ns] = obj;
+            module.hot.dispose(data => {
+                data.instance = this;
             });
+            Object.assign(this, module.hot.data.instance);
         }
     }
 }
+
 export default new DemoStore();
