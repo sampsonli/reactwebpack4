@@ -6,4 +6,4 @@
   
 >面对以上这么多问题， 通过查阅各种资料， 在原有react-redux基础上进行了封装， 整理成了一份通用脚手架， 专门用于解决以上问题
 相关资料
-[react-spirits](https://github.com/sampsonli/react_spirits)
+[react_deliverer](https://github.com/sampsonli/react_deliverer)

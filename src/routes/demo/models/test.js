@@ -1,30 +1,35 @@
-import {connect} from 'react-spirits';
-import ajax from '../common/ajax';
+import {connect, action} from 'react-deliverer';
+// import ajax from '../common/ajax';
 
-export default connect({
-    ns: 'test',
-    state: {
-        newsList: null,
-        abc: 0,
-    },
-    mt: {
-        setNewsList(list) {
-            this.newsList = list;
-        },
-        changeAbc(payload) {
-            this.abc = payload;
-            // this.
-        },
-    },
-    act: {
-        _init() {
-            console.log(this.state);
-        },
-        async getNewsList() {
-            console.log(this.state);
-        },
-        getUserInfo(num) {
-            this.commit('changeAbc', num);
-        },
-    },
-});
+@connect('demo')
+class Demo {
+    newList = null
+
+    abc = 3
+
+    @action
+    setNewsLis(list) {
+        this.newsList = list;
+    }
+
+    @action
+    changeAbc(payload) {
+        this.abc = payload;
+    }
+
+    getAbc(num) {
+        this.changeAbc(num);
+    }
+
+    getNewList() {
+        setTimeout(() => {
+            this.setNewsLis([{
+                title: 'hello',
+            }, {
+                title: 'welcome',
+            }]);
+        }, 1000);
+    }
+}
+
+export default new Demo();

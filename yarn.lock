@@ -4969,6 +4969,11 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-deliverer@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-deliverer/-/react-deliverer-1.0.1.tgz#e4751c825a08ce6693bc73abde2b397c08069625"
+  integrity sha512-msh8sthT45AlOMoKLhVdkGJ/lgygnjW93SryZb1teu2n4DQUu4wOjBBv61ptJ4lvBeNL8tX1ojHO8zFmnPDoSQ==
+
 react-dom@^16.7.0:
   version "16.8.6"
   resolved "https://registry.npm.taobao.org/react-dom/download/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
@@ -5036,11 +5041,6 @@ react-router@5.0.1:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
-
-react-spirits@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.npm.taobao.org/react-spirits/download/react-spirits-3.0.7.tgz?cache=0&sync_timestamp=1564572049025&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-spirits%2Fdownload%2Freact-spirits-3.0.7.tgz#f7b7fb2bfe5c27624d79f516b90399ab6b8d962b"
-  integrity sha1-97f7K/5cJ2JNefUWuQOZq2uNlis=
 
 react@^16.7.0:
   version "16.8.6"
