@@ -17,8 +17,9 @@ class Demo {
         this.abc = payload;
     }
 
-    getAbc(num) {
-        this.changeAbc(num);
+    getAbc() {
+        console.log(this.abc)
+        this.changeAbc(Math.floor(Math.random() * 100));
     }
 
     getNewList() {
