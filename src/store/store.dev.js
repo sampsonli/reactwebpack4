@@ -4,7 +4,7 @@ import {
     createStore, applyMiddleware, compose,
 } from 'redux';
 import logger from 'redux-logger';
-import spirits from 'react-spirits';
+import spirits from 'react-deliverer';
 
 const store = createStore(
     () => {},

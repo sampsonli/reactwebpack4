@@ -3,7 +3,7 @@
 import {
     createStore,
 } from 'redux';
-import spirits from 'react-spirits';
+import spirits from 'react-deliverer';
 
 const store = createStore(
     () => {},
