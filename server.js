@@ -1,13 +1,18 @@
 /** 用于开发环境的服务启动 * */
 const path = require('path'); // 获取绝对路径有用
+// eslint-disable-next-line import/no-extraneous-dependencies
 const express = require('express');
 // express服务器端框架
 const env = process.env.NODE_ENV; // 模式（dev开发环境，production生产环境）
+// eslint-disable-next-line import/no-extraneous-dependencies
 const webpack = require('webpack'); // webpack核心
+// eslint-disable-next-line import/no-extraneous-dependencies
 const webpackDevMiddleware = require('webpack-dev-middleware'); // webpack服务器
+// eslint-disable-next-line import/no-extraneous-dependencies
 const webpackHotMiddleware = require('webpack-hot-middleware'); // HMR热更新中间件
-
+// eslint-disable-next-line
 const forward = require('forward-request');
+// eslint-disable-next-line
 const http = require('http');
 const webpackConfig = require('./build/webpack.config.dev.js'); // webpack开发环境的配置文件
 
