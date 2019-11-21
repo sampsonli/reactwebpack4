@@ -3,12 +3,9 @@
 import {
     createStore,
 } from 'redux';
-import deliverer from 'react-deliverer';
 
 const store = createStore(
     () => {},
     window.__INITIAL_STATE__,
 );
-const asyncReducers = {};
-deliverer(store, asyncReducers);
 export default store;

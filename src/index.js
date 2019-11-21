@@ -4,11 +4,14 @@ import 'core-js/modules/es.object.assign';
 import 'core-js/modules/es.promise';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import deliverer from 'react-deliverer';
 
 import { Provider } from 'react-redux';
 import Router from './router';
 import store from './store';
 import './assets/common.css';
+
+deliverer(store);
 
 ReactDOM.render(
     <Provider store={store}>
