@@ -18,7 +18,6 @@ class Demo {
     }
 
     getAbc() {
-        console.log(this.abc)
         this.changeAbc(Math.floor(Math.random() * 100));
     }
 

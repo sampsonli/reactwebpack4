@@ -9,7 +9,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware'); // HMR热更新�
 
 const forward = require('forward-request');
 const http = require('http');
-const webpackConfig = require('./webpack.config.dev.js'); // webpack开发环境的配置文件
+const webpackConfig = require('./build/webpack.config.dev.js'); // webpack开发环境的配置文件
 
 const app = express(); // 实例化express服务
 const DIST_DIR = webpackConfig.output.path; // webpack配置中设置的文件输出路径，所有文件存放在内存中
