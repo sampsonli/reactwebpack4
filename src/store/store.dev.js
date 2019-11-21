@@ -4,7 +4,7 @@ import {
     createStore, applyMiddleware, compose,
 } from 'redux';
 import logger from 'redux-logger';
-import spirits from 'react-deliverer';
+import deliverer from 'react-deliverer';
 
 const store = createStore(
     () => {},
@@ -14,5 +14,5 @@ const store = createStore(
     ),
 );
 const asyncReducers = {};
-spirits(store, asyncReducers);
+deliverer(store, asyncReducers);
 export default store;

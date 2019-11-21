@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import P from 'prop-types';
 import {connect} from 'react-redux';
 
-import store from '../../models/test';
+import store from '../../store/demoStore';
 import style from './style.less';
 
 const Scroll = ({stat}) => {

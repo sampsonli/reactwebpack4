@@ -3,12 +3,12 @@
 import {
     createStore,
 } from 'redux';
-import spirits from 'react-deliverer';
+import deliverer from 'react-deliverer';
 
 const store = createStore(
     () => {},
     window.__INITIAL_STATE__,
 );
 const asyncReducers = {};
-spirits(store, asyncReducers);
+deliverer(store, asyncReducers);
 export default store;
