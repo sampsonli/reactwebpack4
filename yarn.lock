@@ -4936,10 +4936,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-deliverer@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/react-deliverer/-/react-deliverer-1.0.6.tgz#fbb268e45e284dcfd583ebe200f8d2dc3640a5e1"
-  integrity sha512-RaBt7YlVJvCFvHSH7pL6UZl4cMro3VjKy20Zd6uDV1xDaG710ogfdrtkGpKOEmjxv6aazULIFaEBXeFTz6NFXQ==
+react-deliverer@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-deliverer/-/react-deliverer-1.0.7.tgz#edc5818746073c9f51e5f7f37ad12b4150107324"
+  integrity sha512-YLw6hLERqgnybYLpZLnpAuUfBMKWwm8ggqOXvMetsJ70031AxIqyxPU1fUCaE8oc7DgbcVGhQmUZ3n7xghCy4Q==
 
 react-dom@^16.12.0:
   version "16.12.0"

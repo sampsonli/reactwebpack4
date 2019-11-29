@@ -5,10 +5,16 @@ import {connect} from 'react-redux';
 import model from '../../models/demoModel';
 import style from './style.less';
 
-const Scroll = ({data}) => {
+const Scroll = ({data, location}) => {
     useEffect(() => {
-        data.newsList || model.getNewList();
-    }, []);
+        if (model.hot) {
+            if (!model.hot.data) { // 热更新不需要调用下面方法
+                model.getNewList();
+            }
+        } else {
+            model.getNewList();
+        }
+    }, [location.search]);
     return (
         <div className={`l-full l-flex-column ${style.wrapper}`}>
             <div className={style.header} onClick={() => model.getAbc()}>
@@ -39,6 +45,11 @@ const Scroll = ({data}) => {
     );
 };
 Scroll.propTypes = {
-    data: P.shape({abc: P.any, newsList: P.array}).isRequired,
+    // data: P.shape({abc: P.any, newsList: P.array}).isRequired,
+    data: P.objectOf(P.any).isRequired,
+    location: P.shape({search: P.string}).isRequired,
 };
 export default connect(state => ({data: state[model.ns]}))(Scroll);
+if (module.hot) {
+    module.hot.dispose(() => {});
+}
