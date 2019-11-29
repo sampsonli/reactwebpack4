@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import style from './style.css';
-import store from '../../store/demoStore';
+import model from '../../models/demoModel';
 
-export default connect(state => ({state: state[store.ns]}))(() => (
+export default connect(state => ({data: state[model.ns]}))(({data}) => (
     <div className="l-full l-flex-column">
-        <div className={style.header} onClick={() => store.getAbc(store.abc + 1)}>
-            {store.abc}
+        <div className={style.header} onClick={() => model.getAbc(data.abc + 1)}>
+            {data.abc}
         </div>
 
         <div className="l-flex-1 l-relative">

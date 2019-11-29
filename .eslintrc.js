@@ -38,6 +38,7 @@ module.exports = {
         "consistent-return": "warn",
         'max-len': 0,
         "no-plusplus": 0,
+        "no-unused-expressions": 0
     }
 
 };

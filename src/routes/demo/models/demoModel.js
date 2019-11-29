@@ -2,8 +2,8 @@ import {connect, action} from 'react-deliverer';
 // import ajax from '../common/ajax';
 
 @connect('demo')
-class Demo {
-    newList = null
+class DemoModel {
+    newList
 
     abc = 3
 
@@ -32,4 +32,4 @@ class Demo {
     }
 }
 
-export default new Demo();
+export default new DemoModel();

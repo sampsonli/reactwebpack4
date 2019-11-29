@@ -2,27 +2,27 @@ import React, {useEffect} from 'react';
 import P from 'prop-types';
 import {connect} from 'react-redux';
 
-import store from '../../store/demoStore';
+import model from '../../models/demoModel';
 import style from './style.less';
 
-const Scroll = ({stat}) => {
+const Scroll = ({data}) => {
     useEffect(() => {
-        store.getNewList();
+        data.newsList || model.getNewList();
     }, []);
     return (
         <div className={`l-full l-flex-column ${style.wrapper}`}>
-            <div className={style.header} onClick={() => store.getAbc()}>
+            <div className={style.header} onClick={() => model.getAbc()}>
                 <span>
                         新闻头条-
-                    {stat.abc}
+                    {data.abc}
                 </span>
             </div>
             <div className="l-flex-1 l-relative">
                 <div className="l-full" id="wrapper">
-                    {stat.newsList
+                    {data.newsList
                     && (
                         <ul className={style.list} id="target">
-                            {stat.newsList.map(item => (
+                            {data.newsList.map(item => (
                                 <li key={item.title} className={style.item}>
                                     <div className={style.title}>
                                         {item.title}
@@ -39,6 +39,6 @@ const Scroll = ({stat}) => {
     );
 };
 Scroll.propTypes = {
-    stat: P.shape({abc: P.any, newsList: P.array}).isRequired,
+    data: P.shape({abc: P.any, newsList: P.array}).isRequired,
 };
-export default connect(state => ({stat: state[store.ns]}))(Scroll);
+export default connect(state => ({data: state[model.ns]}))(Scroll);
