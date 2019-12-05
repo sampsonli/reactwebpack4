@@ -3,14 +3,14 @@
 import {
     createStore, applyMiddleware, compose,
 } from 'redux';
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 
 
 const store = createStore(
     () => {},
     window.__INITIAL_STATE__,
     compose(
-        applyMiddleware(logger),
+        // applyMiddleware(logger),
     ),
 );
 

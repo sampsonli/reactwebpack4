@@ -15,7 +15,6 @@ class DemoModel {
     @action
     changeAbc(payload) {
         this.abc = payload;
-        // this.abc = 222
     }
 
     getAbc() {
@@ -23,7 +22,7 @@ class DemoModel {
     }
 
     getNewList() {
-        console.log('getNewList5')
+        console.log('getNewList553')
         setTimeout(() => {
             this.setNewsLis([{
                 title: 'hello',

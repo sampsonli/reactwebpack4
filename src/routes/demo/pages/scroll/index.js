@@ -1,26 +1,28 @@
 import React, {useEffect} from 'react';
 import P from 'prop-types';
 import {connect} from 'react-redux';
+import {useLocation} from 'react-router-dom';
 
 import model from '../../models/demoModel';
 import style from './style.less';
 
-const Scroll = ({data, location}) => {
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
+const Scroll = ({data}) => {
+    const location = useLocation();
+    const query = useQuery();
     useEffect(() => {
-        if (model.hot) {
-            if (!model.hot.data) { // 热更新不需要调用下面方法
-                model.getNewList();
-            }
-        } else {
-            model.getNewList();
-        }
+        model.getNewList();
     }, [location.search]);
     return (
         <div className={`l-full l-flex-column ${style.wrapper}`}>
-            <div className={style.header} onClick={() => model.getAbc()}>
+            <div className={style.header} onClick={() => model.changeAbc(model.abc + 4)}>
                 <span>
                         新闻头条-
                     {data.abc}
+--
+                    {query.get('a')}
                 </span>
             </div>
             <div className="l-flex-1 l-relative">
@@ -45,11 +47,6 @@ const Scroll = ({data, location}) => {
     );
 };
 Scroll.propTypes = {
-    // data: P.shape({abc: P.any, newsList: P.array}).isRequired,
     data: P.objectOf(P.any).isRequired,
-    location: P.shape({search: P.string}).isRequired,
 };
 export default connect(state => ({data: state[model.ns]}))(Scroll);
-if (module.hot) {
-    module.hot.dispose(() => {});
-}
