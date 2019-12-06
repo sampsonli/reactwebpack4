@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import P from 'prop-types';
-import {connect} from 'react-redux';
+import {connect, useSelector} from 'react-redux';
 import {useLocation} from 'react-router-dom';
 
 import model from '../../models/demoModel';
@@ -9,12 +9,13 @@ import style from './style.less';
 function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
-const Scroll = ({data}) => {
+const Scroll = () => {
     const location = useLocation();
     const query = useQuery();
     useEffect(() => {
         model.getNewList();
     }, [location.search]);
+    const data = useSelector(state => state[model.ns]);
     return (
         <div className={`l-full l-flex-column ${style.wrapper}`}>
             <div className={style.header} onClick={() => model.changeAbc(model.abc + 4)}>
@@ -46,7 +47,4 @@ const Scroll = ({data}) => {
         </div>
     );
 };
-Scroll.propTypes = {
-    data: P.objectOf(P.any).isRequired,
-};
-export default connect(state => ({data: state[model.ns]}))(Scroll);
+export default Scroll;
