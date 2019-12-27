@@ -126,7 +126,6 @@ module.exports = {
             minSize: 0,
             maxAsyncRequests: Infinity,
             maxInitialRequests: Infinity,
-            name: true,
             cacheGroups: {
                 default: {
                     chunks: 'async',

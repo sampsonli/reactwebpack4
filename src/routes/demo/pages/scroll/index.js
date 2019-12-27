@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
-import P from 'prop-types';
-import {connect, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {useLocation} from 'react-router-dom';
 
 import model from '../../models/demoModel';
@@ -10,12 +9,12 @@ function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
 const Scroll = () => {
+    const data = useSelector(state => state[model.ns]);
     const location = useLocation();
     const query = useQuery();
     useEffect(() => {
         model.getNewList();
     }, [location.search]);
-    const data = useSelector(state => state[model.ns]);
     return (
         <div className={`l-full l-flex-column ${style.wrapper}`}>
             <div className={style.header} onClick={() => model.changeAbc(model.abc + 4)}>
