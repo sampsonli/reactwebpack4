@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const vendorManifest = require('../static/vendor-manifest');
 const bundleConfig = require('../static/bundle-config');
 // const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -120,8 +121,8 @@ module.exports = {
             dllName: bundleConfig.vendor.js,
         }),
 
-    // new PreloadWebpackPlugin(),
-    // new BundleAnalyzerPlugin() // 打包分析插件，打包后会自动弹出tree图：127.0.0.1:8888
+        // new PreloadWebpackPlugin(),
+        // new BundleAnalyzerPlugin(), // 打包分析插件，打包后会自动弹出tree图：127.0.0.1:8888
     ],
     optimization: {
         // minimizer: [
