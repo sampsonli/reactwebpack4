@@ -10,7 +10,7 @@ const routes = [];
         routes.push(md);
     });
 })(require.context('./', true, /\.\/routes\/[^/]+\/index\.js$/));
-require.context('./', true, /^\.\/(common|components).*\.js$/);
+// require.context('./', true, /^\.\/(common|components).*\.js$/);
 
 export default () => (
     <Router>

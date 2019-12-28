@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const vendorManifest = require('../static/vendor-manifest');
+const bundleConfig = require('../static/bundle-config');
 
 const ctxPath = path.resolve(__dirname, '../');
 const srcPath = path.join(ctxPath, 'src');
@@ -10,7 +12,7 @@ const srcPath = path.join(ctxPath, 'src');
 module.exports = {
     mode: 'development',
     entry: {
-        entry: [
+        app: [
             'webpack-hot-middleware/client?reload=true&path=/__webpack_hmr', // webpack热更新插件，就这么写
             srcPath, // 项目入口
         ],
@@ -103,13 +105,18 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development'),
         }),
-        new CopyWebpackPlugin([{from: path.join(ctxPath, 'static/**/*'), flatten: true}]),
+        new webpack.DllReferencePlugin({
+            context: ctxPath,
+            manifest: vendorManifest,
+        }),
+        new CopyWebpackPlugin([{from: path.join(ctxPath, 'static'), flatten: false}]),
         new HtmlWebpackPlugin({
             // 根据模板插入css/js等生成最终HTML
             filename: 'index.html', // 生成的html存放路径，相对于 output.path
             template: path.join(srcPath, 'index.ejs'), // html模板路径
             favicon: path.join(ctxPath, 'static/favicon.ico'), // 自动把根目录下的favicon.ico图片加入html
             inject: true, // 是否将js放在body的末尾
+            dllName: bundleConfig.vendor.js,
         }),
     // new PreloadWebpackPlugin(),
     // new BundleAnalyzerPlugin() // 打包分析插件，打包后会自动弹出tree图：127.0.0.1:8888

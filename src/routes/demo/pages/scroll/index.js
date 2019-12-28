@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import {useLocation} from 'react-router-dom';
-
+import Radar from './Radar';
 import model from '../../models/demoModel';
 import style from './style.less';
 
@@ -27,6 +27,7 @@ const Scroll = () => {
             </div>
             <div className="l-flex-1 l-relative">
                 <div className="l-full" id="wrapper">
+                    <Radar />
                     {data.newsList
                     && (
                         <ul className={style.list} id="target">

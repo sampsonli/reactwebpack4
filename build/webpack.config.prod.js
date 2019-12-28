@@ -3,6 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const vendorManifest = require('../static/vendor-manifest');
+const bundleConfig = require('../static/bundle-config');
 // const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const ctxPath = path.resolve(__dirname, '../');
 const srcPath = path.join(ctxPath, 'src');
@@ -10,7 +12,7 @@ const srcPath = path.join(ctxPath, 'src');
 module.exports = {
     mode: 'production',
     entry: {
-        main: [srcPath],
+        app: [srcPath],
     },
     output: {
         path: path.join(ctxPath, 'dist'), // 将文件打包到此目录下
@@ -100,17 +102,22 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production'),
             'process.env.EWT_ENV': JSON.stringify(process.env.EWT_ENV || 'online'),
         }),
+        new webpack.DllReferencePlugin({
+            context: ctxPath,
+            manifest: vendorManifest,
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash:6].css',
             chunkFilename: '[id].[contenthash:6].chunk.css',
         }),
-        new CopyWebpackPlugin([{from: path.join(ctxPath, 'static/**/*'), flatten: true}]),
+        new CopyWebpackPlugin([{from: path.join(ctxPath, 'static'), flatten: false}]),
         new HtmlWebpackPlugin({
             // 根据模板插入css/js等生成最终HTML
             filename: 'index.html', // 生成的html存放路径，相对于 output.path
             template: path.join(srcPath, 'index.ejs'), // html模板路径
             favicon: path.join(ctxPath, 'static/favicon.ico'), // 自动把根目录下的favicon.ico图片加入html
             inject: true, // 是否将js放在body的末尾
+            dllName: bundleConfig.vendor.js,
         }),
 
     // new PreloadWebpackPlugin(),
