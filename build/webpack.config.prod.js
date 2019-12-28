@@ -18,8 +18,8 @@ module.exports = {
     output: {
         path: path.join(ctxPath, 'dist'), // 将文件打包到此目录下
         publicPath: '', // 在生成的html中，文件的引入路径会相对于此地址，生成的css中，以及各类图片的URL都会相对于此地址
-        filename: '[name].[contenthash:6].js',
-        chunkFilename: '[id].[contenthash:6].chunk.js',
+        filename: '[name].[chunkhash:8].js',
+        chunkFilename: '[name].[chunkhash:8].chunk.js',
     },
     context: ctxPath,
     module: {
@@ -122,7 +122,7 @@ module.exports = {
         }),
 
         // new PreloadWebpackPlugin(),
-        // new BundleAnalyzerPlugin(), // 打包分析插件，打包后会自动弹出tree图：127.0.0.1:8888
+        new BundleAnalyzerPlugin(), // 打包分析插件，打包后会自动弹出tree图：127.0.0.1:8888
     ],
     optimization: {
         // minimizer: [
