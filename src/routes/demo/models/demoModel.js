@@ -1,18 +1,18 @@
-import {connect, action} from 'react-deliverer';
+import {deliver, reducer} from 'react-deliverer';
 // import ajax from '../common/ajax';
 
-@connect('demo')
+@deliver('demo')
 class DemoModel {
     newList
 
     abc = 3
 
-    @action
+    @reducer
     setNewsLis(list) {
         this.newsList = list;
     }
 
-    @action
+    @reducer
     changeAbc(payload) {
         this.abc = payload;
     }
@@ -22,7 +22,7 @@ class DemoModel {
     }
 
     getNewList() {
-        console.log('getNewList553')
+        console.log('getNewList553');
         setTimeout(() => {
             this.setNewsLis([{
                 title: 'hello',

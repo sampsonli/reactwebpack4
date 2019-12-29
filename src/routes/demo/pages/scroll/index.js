@@ -5,13 +5,9 @@ import Radar from './Radar';
 import model from '../../models/demoModel';
 import style from './style.less';
 
-function useQuery() {
-    return new URLSearchParams(useLocation().search);
-}
 const Scroll = () => {
     const data = useSelector(state => state[model.ns]);
     const location = useLocation();
-    const query = useQuery();
     useEffect(() => {
         model.getNewList();
     }, [location.search]);
@@ -19,10 +15,8 @@ const Scroll = () => {
         <div className={`l-full l-flex-column ${style.wrapper}`}>
             <div className={style.header} onClick={() => model.changeAbc(model.abc + 4)}>
                 <span>
-                        新闻头条22-
+                        新闻头条2-
                     {data.abc}
---
-                    {query.get('a')}
                 </span>
             </div>
             <div className="l-flex-1 l-relative">
