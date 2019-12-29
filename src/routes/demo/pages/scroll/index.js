@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react';
+import propTypes from 'prop-types';
 import {useSelector} from 'react-redux';
 import {useLocation} from 'react-router-dom';
 import Radar from './Radar';
 import model from '../../models/demoModel';
 import style from './style.less';
 
-const Scroll = () => {
+const Scroll = ({hot}) => {
     const data = useSelector(state => state[model.ns]);
     const location = useLocation();
     useEffect(() => {
@@ -15,8 +16,11 @@ const Scroll = () => {
         <div className={`l-full l-flex-column ${style.wrapper}`}>
             <div className={style.header} onClick={() => model.changeAbc(model.abc + 4)}>
                 <span>
-                        新闻头条2-
-                    {data.abc}
+                    <span>新闻头条221-</span>
+                    <span>
+                        {data.abc}
+                    </span>
+                    <i>{`${hot}`}</i>
                 </span>
             </div>
             <div className="l-flex-1 l-relative">
@@ -40,5 +44,8 @@ const Scroll = () => {
 
         </div>
     );
+};
+Scroll.propTypes = {
+    hot: propTypes.bool.isRequired,
 };
 export default Scroll;
