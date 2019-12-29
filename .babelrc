@@ -20,7 +20,7 @@
   ],
   "plugins": [
     "@babel/plugin-transform-runtime",
-    "@babel/plugin-syntax-dynamic-import",
+    "./build/import_async",
     ["@babel/plugin-proposal-decorators", {
       "legacy": true
     }],
