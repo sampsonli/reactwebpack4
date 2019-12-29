@@ -18,7 +18,7 @@ module.exports = {
     output: {
         path: path.join(ctxPath, 'dist'), // 将文件打包到此目录下
         publicPath: '', // 在生成的html中，文件的引入路径会相对于此地址，生成的css中，以及各类图片的URL都会相对于此地址
-        filename: '[name].[chunkhash:8].js',
+        filename: '[name].[chunkhash:8].bundle.js',
         chunkFilename: '[name].[chunkhash:8].chunk.js',
     },
     context: ctxPath,
@@ -124,6 +124,9 @@ module.exports = {
     ].concat((process.env.ANALYSE && [
         new BundleAnalyzerPlugin(),
     ]) || []),
+    performance: {
+        maxAssetSize: 1024 * 1024,
+    },
     optimization: {
         // minimizer: [
         //     new OptimizeCSSAssetsPlugin({})
