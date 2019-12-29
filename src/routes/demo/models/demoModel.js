@@ -1,4 +1,4 @@
-import {deliver, reducer} from 'react-deliverer';
+import {deliver, mutate} from 'react-deliverer';
 // import ajax from '../common/ajax';
 
 @deliver('demo')
@@ -7,12 +7,12 @@ class DemoModel {
 
     abc = 3
 
-    @reducer
+    @mutate
     setNewsLis(list) {
         this.newsList = list;
     }
 
-    @reducer
+    @mutate
     changeAbc(payload) {
         this.abc = payload;
     }

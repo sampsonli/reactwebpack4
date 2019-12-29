@@ -16,7 +16,7 @@ const Scroll = ({hot}) => {
         <div className={`l-full l-flex-column ${style.wrapper}`}>
             <div className={style.header} onClick={() => model.changeAbc(model.abc + 4)}>
                 <span>
-                    <span>新闻头条221-</span>
+                    <span>新闻头条22-</span>
                     <span>
                         {data.abc}
                     </span>

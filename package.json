@@ -8,7 +8,7 @@
     "core-js": "^3.6.1",
     "prop-types": "^15.6.2",
     "react": "^16.12.0",
-    "react-deliverer": "^2.0.1",
+    "react-deliverer": "^2.0.2",
     "react-dom": "^16.12.0",
     "react-loadable": "^5.5.0",
     "react-redux": "^7.1.3",
