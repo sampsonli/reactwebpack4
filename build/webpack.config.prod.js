@@ -120,10 +120,10 @@ module.exports = {
             inject: true, // 是否将js放在body的末尾
             dllName: bundleConfig.vendor.js,
         }),
-
         // new PreloadWebpackPlugin(),
-        new BundleAnalyzerPlugin(), // 打包分析插件，打包后会自动弹出tree图：127.0.0.1:8888
-    ],
+    ].concat((process.env.ANALYSE && [
+        new BundleAnalyzerPlugin(),
+    ]) || []),
     optimization: {
         // minimizer: [
         //     new OptimizeCSSAssetsPlugin({})

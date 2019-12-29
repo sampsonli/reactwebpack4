@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build": "rimraf dist/* && webpack --config build/webpack.config.prod.js",
+    "build:analyse": "rimraf dist/* && cross-env ANALYSE=1 webpack --config build/webpack.config.prod.js",
     "build:dll": "webpack --config build/webpack.config.dll.js",
     "clean": "rimraf dist",
     "dev": "cross-env NODE_ENV=development PORT=3001 node server.js",
