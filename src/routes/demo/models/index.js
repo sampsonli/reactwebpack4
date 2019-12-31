@@ -10,22 +10,24 @@ function wait(time) {
 
 @deliver('demo_home')
 class HomeModel {
-    loading = false;
+    #loading = false;
 
-    time = new Date();
+    #time = new Date();
 
     * getTime() {
-        console.log('hello');
-        this.loading = true;
-        this.time = yield wait(1000);
-        this.loading = false;
-        this.time = yield wait(1000);
-        this.time = yield wait(1000);
-        this.time = yield wait(1000);
+        // alert('hello')
+        console.log('hello122');
+        this.#loading = true;
+        this.#time = yield wait(1000);
+        this.#loading = false;
+        this.#time = yield wait(1000);
+        this.print();
+        this.#time = yield wait(1000);
+        this.#time = yield wait(1000);
     }
 
     print() {
-        console.log('hello');
+        console.log(this.time);
     }
 }
 export default new HomeModel();
