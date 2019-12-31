@@ -23,5 +23,9 @@ class HomeModel {
         this.time = yield wait(1000);
         this.time = yield wait(1000);
     }
+
+    print() {
+        console.log('hello');
+    }
 }
 export default new HomeModel();

@@ -36,6 +36,7 @@ module.exports = {
         "jsx-a11y/no-noninteractive-element-interactions": "off",
         "arrow-parens": "off",
         "consistent-return": "warn",
+        "class-methods-use-this": "off",
         'max-len': 0,
         "no-plusplus": 0,
         "no-unused-expressions": 0,

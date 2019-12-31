@@ -1,4 +1,4 @@
-import {connect, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -10,9 +10,7 @@ const Home = () => {
     const data = useSelector(state => state[model.ns]);
     const location = useLocation();
     useEffect(() => {
-        console.log(1);
         model.getTime();
-        console.log(2);
     }, [location.search]);
     return (
         <div className={style.container}>
@@ -26,4 +24,4 @@ const Home = () => {
 Home.propTypes = {
     history: PropTypes.shape({push: PropTypes.func}).isRequired,
 };
-export default connect(state => ({data: state[model.ns]}))(Home);
+export default Home;
