@@ -4,12 +4,12 @@ import P from 'prop-types';
 import load from '~/common/load';
 
 
-const Scroll = load(() => import('./pages/scroll'));
+const Home = load(() => import('./pages/home'));
 
 
 const Demo = ({match}) => (
     <Switch>
-        <Route path={`${match.url}/scroll`} component={Scroll} />
+        <Route path={`${match.url}/home`} component={Home} />
     </Switch>
 );
 

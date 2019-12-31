@@ -1904,6 +1904,11 @@ clone@^2.1.1, clone@^2.1.2:
   resolved "https://registry.yarnpkg.com/clone/-/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
   integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
 
+co@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
+  integrity sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=
+
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
@@ -4744,6 +4749,11 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -5738,10 +5748,12 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-deliverer@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/react-deliverer/-/react-deliverer-2.0.2.tgz#e4d530c6ce7d955d9b3217df5c7a65fd2daff5f7"
-  integrity sha512-W9si7K88+O/PbIhEZJLC7s7tJiWi2JVmK6r+Rk4/3vKMANwzQB4V8z9JmknGEbghtYfl7g3wlDMLfFSrvmkUYg==
+react-deliverer@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/react-deliverer/-/react-deliverer-3.0.2.tgz#53f995da3b39a735d033f95b0bb59e7906128421"
+  integrity sha512-ftSoQfCQlkOGa82MpYVxQPQY7qfN2xWhiTMqFP+cB/RACmaI/bnYR5/XP/zmM7Df3E5G/UU3csX9IPk+9Sowdw==
+  dependencies:
+    co "^4.6.0"
 
 react-dom@^16.12.0:
   version "16.12.0"

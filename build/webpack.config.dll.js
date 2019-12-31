@@ -5,7 +5,7 @@ const AssetsPlugin = require('assets-webpack-plugin');
 module.exports = {
     mode: 'production',
     entry: {
-        vendor: ['react', 'prop-types', 'react-dom', 'react-router', 'react-redux', 'redux', 'axios', 'classnames', 'react-deliverer'],
+        vendor: ['react', 'prop-types', 'react-dom', 'react-router', 'react-redux', 'redux', 'axios', 'classnames', 'react-deliverer', 'moment'],
     },
 
     output: {
