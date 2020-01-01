@@ -20,7 +20,7 @@
   ],
   "plugins": [
     "@babel/plugin-transform-runtime",
-    "react-deliverer/lib/import_async",
+    "webpack-dynamic-import",
     ["@babel/plugin-proposal-decorators", {
       "legacy": true
     }],

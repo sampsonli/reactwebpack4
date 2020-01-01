@@ -1437,6 +1437,11 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
+babel-plugin-webpack-dynamic-import@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-webpack-dynamic-import/-/babel-plugin-webpack-dynamic-import-1.0.0.tgz#a16d2f1bc364c00de45a1ebea3c1b96210b19f7a"
+  integrity sha512-KkRYIOlmMwmWP1iOiKwHeCMRV/3f5P6dRHRl70JGSMk8pCiv5Yni7/a0tU/RchyEgaMXnygxXEy/2xnblM8fUQ==
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
