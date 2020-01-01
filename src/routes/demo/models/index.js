@@ -8,9 +8,11 @@ function wait(time) {
     });
 }
 
-@deliver('demo_home')
+@deliver
 class HomeModel {
-    #loading = false;
+    ns = 'lichun'
+
+    #running = false;
 
     #time = new Date();
 
@@ -19,20 +21,19 @@ class HomeModel {
     }
 
     * getTime() {
-        // alert('hello')
-        this.#loading = true;
+        if (this.running) return;
+        this.running = true;
         this.#time = yield wait(1000);
-        this.#loading = false;
-        this.i = 20;
+        this.i = 10;
         while (this.i--) {
             this.#time = yield wait(1000);
         }
-        console.log('20s later');
+        console.log('10s later');
+        this.running = false;
     }
 
     print() {
         console.log(this.#time);
     }
 }
-const model = new HomeModel();
-export default model;
+export default new HomeModel();

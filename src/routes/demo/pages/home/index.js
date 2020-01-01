@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div className={style.container}>
             <div className={style.content}>
-                {(data.loading && 'loading') || moment(data.time).format('HH:mm:ss')}
+                {(data.loading && 'loading') || moment(data.time).format('新年好 HH:mm:ss')}
             </div>
 
         </div>
