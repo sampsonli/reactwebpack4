@@ -8,17 +8,13 @@ function wait(time) {
     });
 }
 
-@deliver
+@deliver('hello')
 class HomeModel {
     ns = 'lichun'
 
     #running = false;
 
     #time = new Date();
-
-    constructor(data) {
-        this.#time = data;
-    }
 
     * getTime() {
         if (this.running) return;
@@ -36,4 +32,4 @@ class HomeModel {
         console.log(this.#time);
     }
 }
-export default new HomeModel();
+export default new HomeModel('lichun');
