@@ -1,4 +1,3 @@
-import {useSelector} from 'react-redux';
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -7,7 +6,7 @@ import style from './style.less';
 import model from '../../models';
 
 const Home = () => {
-    const data = useSelector(state => state[model.ns]);
+    const data = model.useData();
     const location = useLocation();
     useEffect(() => {
         model.getTime();

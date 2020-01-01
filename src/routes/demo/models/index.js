@@ -14,20 +14,25 @@ class HomeModel {
 
     #time = new Date();
 
+    constructor(data) {
+        this.#time = data;
+    }
+
     * getTime() {
         // alert('hello')
-        console.log('hello122');
         this.#loading = true;
         this.#time = yield wait(1000);
         this.#loading = false;
-        this.#time = yield wait(1000);
-        this.print();
-        this.#time = yield wait(1000);
-        this.#time = yield wait(1000);
+        this.i = 20;
+        while (this.i--) {
+            this.#time = yield wait(1000);
+        }
+        console.log('20s later');
     }
 
     print() {
-        console.log(this.time);
+        console.log(this.#time);
     }
 }
-export default new HomeModel();
+const model = new HomeModel();
+export default model;
