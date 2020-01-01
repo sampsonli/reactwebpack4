@@ -10,8 +10,6 @@ function wait(time) {
 
 @deliver('hello')
 class HomeModel {
-    ns = 'lichun'
-
     #running = false;
 
     #time = new Date();
@@ -32,4 +30,4 @@ class HomeModel {
         console.log(this.#time);
     }
 }
-export default new HomeModel('lichun');
+export default new HomeModel();
