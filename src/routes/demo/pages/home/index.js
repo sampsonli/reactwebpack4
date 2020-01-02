@@ -7,6 +7,7 @@ import model from '../../models';
 
 const Home = () => {
     const data = model.useData();
+    // const data2 = model.useData();
     const location = useLocation();
     useEffect(() => {
         model.getTime();

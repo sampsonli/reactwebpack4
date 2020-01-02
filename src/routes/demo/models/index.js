@@ -15,15 +15,15 @@ class HomeModel {
     #time = new Date();
 
     * getTime() {
-        if (this.running) return;
-        this.running = true;
+        if (this.#running) return;
+        this.#running = true;
         this.#time = yield wait(1000);
         this.i = 10;
         while (this.i--) {
             this.#time = yield wait(1000);
         }
         console.log('10s later');
-        this.running = false;
+        this.#running = false;
     }
 
     print() {
