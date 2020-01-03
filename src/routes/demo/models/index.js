@@ -3,7 +3,7 @@ import {deliver} from 'react-deliverer';
 function wait(time) {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(new Date());
+            resolve(1);
         }, time);
     });
 }
@@ -12,18 +12,22 @@ function wait(time) {
 class HomeModel {
     #running = false;
 
-    #time = new Date();
+    #time = 100;
+
+    setTime() {
+        this.#time = 400;
+    }
 
     * getTime() {
-        if (this.#running) return;
-        this.#running = true;
-        this.#time = yield wait(1000);
-        this.i = 10;
-        while (this.i--) {
-            this.#time = yield wait(1000);
-        }
-        console.log('10s later');
-        this.#running = false;
+        yield wait(1000);
+        this.#time = 10;
+
+        this.setTime();
+        console.log(--this.#time);
+        yield wait(1000);
+        this.#time = 120;
+        yield wait(1000);
+        this.#time = 101;
     }
 
     print() {
