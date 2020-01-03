@@ -15,20 +15,23 @@ class HomeModel {
     #time = 100;
 
     * setTime() {
-        yield wait(1000);
-        this.#time = 400;
-        yield wait(1000);
-        return 'hello';
+        let i = 50;
+        while (i--) {
+            yield wait(80);
+            this.#time++;
+        }
+        return '新年快乐！';
     }
 
     * getTime() {
-        yield wait(1000);
-        this.#time = 10;
+        this.#time = 100;
         const info = yield this.setTime();
-        --this.#time;
-        yield wait(1000);
-        this.#time = 120;
-        yield wait(1000);
+
+        let i = 100;
+        while (i--) {
+            yield wait(60);
+            this.#time--;
+        }
         this.#time = info;
     }
 
