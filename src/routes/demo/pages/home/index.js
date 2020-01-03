@@ -13,6 +13,7 @@ const Home = () => {
     return (
         <div className={style.container}>
             <div className={style.content}>
+                2020年-
                 {(data.time)}
             </div>
 
