@@ -18,18 +18,22 @@ class HomeModel {
         yield wait(1000);
         this.#time = 400;
         yield wait(1000);
+        return 'hello';
     }
 
     * getTime() {
         yield wait(1000);
         this.#time = 10;
+        const info = yield this.setTime();
+        --this.#time;
+        yield wait(1000);
+        this.#time = 120;
+        yield wait(1000);
+        this.#time = info;
+    }
 
-        yield this.setTime();
-        console.log(--this.#time);
-        yield wait(1000);
-        // this.#time = 120;
-        yield wait(1000);
-        this.#time = 101;
+    changeRunning() {
+        this.#running = true;
     }
 
     print() {
