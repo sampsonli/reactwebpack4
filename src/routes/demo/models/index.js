@@ -14,18 +14,20 @@ class HomeModel {
 
     #time = 100;
 
-    setTime() {
+    * setTime() {
+        yield wait(1000);
         this.#time = 400;
+        yield wait(1000);
     }
 
     * getTime() {
         yield wait(1000);
         this.#time = 10;
 
-        this.setTime();
+        yield this.setTime();
         console.log(--this.#time);
         yield wait(1000);
-        this.#time = 120;
+        // this.#time = 120;
         yield wait(1000);
         this.#time = 101;
     }
