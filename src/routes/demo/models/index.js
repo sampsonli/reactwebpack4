@@ -15,9 +15,9 @@ class HomeModel {
     #time = 100;
 
     * setTime() {
-        let i = 50;
+        let i = 20;
         while (i--) {
-            yield wait(80);
+            yield wait(100);
             this.#time++;
         }
         return '新年快乐！';
@@ -27,9 +27,9 @@ class HomeModel {
         this.#time = 100;
         const info = yield this.setTime();
 
-        let i = 100;
+        let i = 50;
         while (i--) {
-            yield wait(60);
+            yield wait(50);
             this.#time--;
         }
         this.#time = info;
