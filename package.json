@@ -20,11 +20,11 @@
   },
   "scripts": {
     "build": "rimraf dist/* && webpack --config build/webpack.config.prod.js",
-    "build:analyse": "rimraf dist/* && cross-env ANALYSE=1 webpack --config build/webpack.config.prod.js",
+    "build:analyse": "cross-env ANALYSE=1 npm run build",
     "build:dll": "webpack --config build/webpack.config.dll.js",
     "clean": "rimraf dist",
-    "dev": "cross-env NODE_ENV=development PORT=3001 node server.js",
-    "start": "cross-env NODE_ENV=production PORT=3001 node server.js"
+    "dev": "cross-env NODE_ENV=development PORT=3000 node server.js",
+    "start": "cross-env NODE_ENV=production PORT=3000 node server.js"
   },
   "husky": {
     "hooks": {
@@ -58,7 +58,7 @@
     "babel-plugin-webpack-dynamic-import": "^1.0.0",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^6.0.3",
-    "css-loader": "^3.4.0",
+    "css-loader": "^3.4.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.19.1",
