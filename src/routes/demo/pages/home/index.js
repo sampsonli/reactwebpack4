@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {useLocation} from 'react-router-dom';
 import style from './style.less';
 import model from '../../models';
+import Radar from './Radar';
 
 const Home = () => {
     const data = model.useData();
@@ -13,9 +14,13 @@ const Home = () => {
     return (
         <div className={style.container}>
             <div className={style.content}>
-                2020年-
-                {(data.time)}
+                <div className={style.txt}>
+                    2020年-
+                    {(data.time)}
+                </div>
+                <Radar />
             </div>
+
 
         </div>
     );
