@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const vendorManifest = require('../static/vendor-manifest');
+// const vendorManifest = require('../static/vendor-manifest');
 const bundleConfig = require('../static/bundle-config');
 
 const ctxPath = path.resolve(__dirname, '../');
@@ -105,10 +105,10 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development'),
         }),
-        new webpack.DllReferencePlugin({
+        /* new webpack.DllReferencePlugin({
             context: ctxPath,
             manifest: vendorManifest,
-        }),
+        }), */
         new CopyWebpackPlugin([{from: path.join(ctxPath, 'static'), flatten: false}]),
         new HtmlWebpackPlugin({
             // 根据模板插入css/js等生成最终HTML

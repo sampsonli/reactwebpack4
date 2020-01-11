@@ -1,11 +1,10 @@
 import React, {useEffect} from 'react';
-import PropTypes from 'prop-types';
 import {useLocation} from 'react-router-dom';
 import style from './style.less';
 import model from '../../models';
 import Radar from './Radar';
 
-const Home = () => {
+export default () => {
     const data = model.useData();
     const location = useLocation();
     useEffect(() => {
@@ -25,7 +24,3 @@ const Home = () => {
         </div>
     );
 };
-Home.propTypes = {
-    history: PropTypes.shape({push: PropTypes.func}).isRequired,
-};
-export default Home;
