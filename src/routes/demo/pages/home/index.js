@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import style from './style.less';
 import model from '../../models';
-import Radar from './Radar';
 
 export default () => {
     const data = model.useData();
@@ -17,7 +16,6 @@ export default () => {
                     2020年-
                     {(data.time)}
                 </div>
-                <Radar />
             </div>
 
 
