@@ -29,7 +29,7 @@ module.exports = {
         rules: [
             {
                 // .js .jsx用babel解析
-                test: /\.js?$/,
+                test: /\.jsx?$/,
                 include: srcPath,
                 use: [
                     'babel-loader',

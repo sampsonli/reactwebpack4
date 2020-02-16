@@ -26,7 +26,7 @@ module.exports = {
         rules: [
             {
                 // .js .jsx用babel解析
-                test: /\.js?$/,
+                test: /\.jsx?$/,
                 include: srcPath,
                 use: [
                     'babel-loader',
@@ -101,7 +101,6 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production'),
-            'process.env.EWT_ENV': JSON.stringify(process.env.EWT_ENV || 'online'),
         }),
         new webpack.DllReferencePlugin({
             context: ctxPath,
