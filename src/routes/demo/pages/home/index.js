@@ -14,7 +14,7 @@ export default () => {
         <div className={style.container}>
             <div className={style.content}>
                 <div className={style.txt}>
-                    2020年-
+                    2020年--
                     {(data.time)}
                 </div>
                 <div className={style.txt}>
