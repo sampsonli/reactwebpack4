@@ -8,12 +8,12 @@ export default () => {
     const data = model.useData();
     const location = useLocation();
     useEffect(() => {
-        model.getTime();
+        model.getTime().catch(e => console.log(e));
     }, [location.search]);
     return (
         <div className={style.container}>
             <div className={style.content}>
-                <div className={style.txt}>
+                <div className={style.txt} onClick={model.getTime}>
                     2020年--
                     {(data.time)}
                 </div>

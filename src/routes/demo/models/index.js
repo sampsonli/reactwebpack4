@@ -12,27 +12,21 @@ function wait(time) {
 class HomeModel {
     #running = false;
 
-    #time = 100;
+    #time = 1;
 
-    * setTime() {
-        let i = 20;
-        while (i--) {
-            yield wait(100);
-            this.#time++;
-        }
-        return '新年快乐！';
-    }
 
     * getTime() {
-        this.#time = 100;
-        const info = yield this.setTime();
-
-        let i = 50;
-        while (i--) {
-            yield wait(50);
-            this.#time--;
+        console.log(this.#time);
+        this.#time = 1;
+        try {
+            yield wait(1000);
+            yield Promise.reject(new Error('error'));
+            this.#time = 0;
+        } catch (e) {
+            this.#time = 2;
+            yield wait(1000);
+            this.#time = 3;
         }
-        this.#time = info;
     }
 
     changeRunning() {
