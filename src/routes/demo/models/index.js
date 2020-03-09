@@ -20,12 +20,14 @@ class HomeModel {
         this.#time = 1;
         try {
             yield wait(1000);
-            yield Promise.reject(new Error('error'));
+            this.a.b = 2;
             this.#time = 0;
         } catch (e) {
+            console.log(e.message);
             this.#time = 2;
             yield wait(1000);
             this.#time = 3;
+            throw e;
         }
     }
 
