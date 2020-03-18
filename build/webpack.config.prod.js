@@ -119,17 +119,15 @@ module.exports = {
             inject: true, // 是否将js放在body的末尾
             dllName: bundleConfig.vendor.js,
         }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: process.env.ANALYSE ? 'server' : 'disabled',
+        }),
         // new PreloadWebpackPlugin(),
-    ].concat((process.env.ANALYSE && [
-        new BundleAnalyzerPlugin(),
-    ]) || []),
+    ],
     performance: {
         maxAssetSize: 1024 * 1024,
     },
     optimization: {
-        // minimizer: [
-        //     new OptimizeCSSAssetsPlugin({})
-        // ],
         runtimeChunk: true,
         splitChunks: {
             chunks: 'all', // Taken from https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693
