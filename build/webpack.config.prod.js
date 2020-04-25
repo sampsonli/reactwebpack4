@@ -55,6 +55,7 @@ module.exports = {
                             modules: {
                                 localIdentName: '[local]-[hash:base64:5]',
                             },
+                            localsConvention: 'camelCaseOnly',
                         },
                     },
                     'postcss-loader',

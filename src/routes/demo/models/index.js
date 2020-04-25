@@ -14,6 +14,10 @@ class HomeModel {
 
     #time = 1;
 
+    #a = 1;
+
+    #b = 11;
+
 
     * getTime() {
         console.log(this.#time);

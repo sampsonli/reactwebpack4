@@ -13,11 +13,15 @@ export default () => {
     return (
         <div className={style.container}>
             <div className={style.content}>
-                <div className={style.txt} onClick={model.getTime}>
+                <div className={style.txt} onClick={() => model.setData({a: data.a + 1, b: data.b + 2})}>
                     2020年--
                     {(data.time)}
+--
+                    {data.a}
+--
+                    {data.b}
                 </div>
-                <div className={style.txt}>
+                <div className={style.txtTest}>
                     <Radar />
                 </div>
             </div>
