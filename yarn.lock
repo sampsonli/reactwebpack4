@@ -1668,10 +1668,10 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
-babel-plugin-webpack-dynamic-import@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-webpack-dynamic-import/-/babel-plugin-webpack-dynamic-import-1.0.0.tgz#a16d2f1bc364c00de45a1ebea3c1b96210b19f7a"
-  integrity sha512-KkRYIOlmMwmWP1iOiKwHeCMRV/3f5P6dRHRl70JGSMk8pCiv5Yni7/a0tU/RchyEgaMXnygxXEy/2xnblM8fUQ==
+babel-plugin-webpack-dynamic-import@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/babel-plugin-webpack-dynamic-import/download/babel-plugin-webpack-dynamic-import-1.0.1.tgz#ce9698e404d26fa78d9efde482c5635b7381ab11"
+  integrity sha1-zpaY5ATSb6eNnv3kgsVjW3OBqxE=
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -2139,7 +2139,7 @@ cliui@^5.0.0:
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
 
-clone@^2.1.1, clone@^2.1.2:
+clone@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/clone/-/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
   integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
@@ -2982,10 +2982,10 @@ eslint-plugin-es@^3.0.0:
     eslint-utils "^2.0.0"
     regexpp "^3.0.0"
 
-eslint-plugin-import@^2.20.1:
-  version "2.20.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.20.1.tgz#802423196dcb11d9ce8435a5fc02a6d3b46939b3"
-  integrity sha512-qQHgFOTjguR+LnYRoToeZWT62XM55MBVXObHM6SKFd1VzDcX/vqT1kAz8ssqigh5eMj8qXcRoXXGZpPP6RfdCw==
+eslint-plugin-import@^2.20.2:
+  version "2.20.2"
+  resolved "https://registry.npm.taobao.org/eslint-plugin-import/download/eslint-plugin-import-2.20.2.tgz?cache=0&sync_timestamp=1585455648129&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint-plugin-import%2Fdownload%2Feslint-plugin-import-2.20.2.tgz#91fc3807ce08be4837141272c8b99073906e588d"
+  integrity sha1-kfw4B84Ivkg3FBJyyLmQc5BuWI0=
   dependencies:
     array-includes "^3.0.3"
     array.prototype.flat "^1.2.1"
@@ -3015,10 +3015,10 @@ eslint-plugin-jsx-a11y@^6.2.3:
     has "^1.0.3"
     jsx-ast-utils "^2.2.1"
 
-eslint-plugin-node@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-11.0.0.tgz#365944bb0804c5d1d501182a9bc41a0ffefed726"
-  integrity sha512-chUs/NVID+sknFiJzxoN9lM7uKSOEta8GC8365hw1nDfwIPIjjpRSwwPvQanWv8dt/pDe9EV4anmVSwdiSndNg==
+eslint-plugin-node@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.npm.taobao.org/eslint-plugin-node/download/eslint-plugin-node-11.1.0.tgz?cache=0&sync_timestamp=1585396050025&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint-plugin-node%2Fdownload%2Feslint-plugin-node-11.1.0.tgz#c95544416ee4ada26740a30474eefc5402dc671d"
+  integrity sha1-yVVEQW7kraJnQKMEdO78VALcZx0=
   dependencies:
     eslint-plugin-es "^3.0.0"
     eslint-utils "^2.0.0"
@@ -4553,14 +4553,15 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
-less-loader@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/less-loader/-/less-loader-5.0.0.tgz#498dde3a6c6c4f887458ee9ed3f086a12ad1b466"
-  integrity sha512-bquCU89mO/yWLaUq0Clk7qCsKhsF/TZpJUzETRvJa9KSVEL9SO3ovCvdEHISBhrC81OwC8QSVX7E0bzElZj9cg==
+less-loader@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npm.taobao.org/less-loader/download/less-loader-6.0.0.tgz?cache=0&sync_timestamp=1587746448190&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fless-loader%2Fdownload%2Fless-loader-6.0.0.tgz#f7833177c2fc3de5014de072d5c26eca0954c1cb"
+  integrity sha1-94Mxd8L8PeUBTeBy1cJuyglUwcs=
   dependencies:
-    clone "^2.1.1"
-    loader-utils "^1.1.0"
-    pify "^4.0.1"
+    clone "^2.1.2"
+    less "^3.11.1"
+    loader-utils "^2.0.0"
+    schema-utils "^2.6.6"
 
 less@^3.11.1:
   version "3.11.1"
@@ -4902,12 +4903,24 @@ mime-db@1.42.0:
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.42.0.tgz#3e252907b4c7adb906597b4b65636272cf9e7bac"
   integrity sha512-UbfJCR4UAVRNgMpfImz05smAXK7+c+ZntjaA26ANtkXLlOe947Aag5zdIcKQULAiF9Cq4WxBi9jUs5zkA84bYQ==
 
+mime-db@1.44.0:
+  version "1.44.0"
+  resolved "https://registry.npm.taobao.org/mime-db/download/mime-db-1.44.0.tgz?cache=0&sync_timestamp=1587603398892&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmime-db%2Fdownload%2Fmime-db-1.44.0.tgz#fa11c5eb0aca1334b4233cb4d52f10c5a6272f92"
+  integrity sha1-+hHF6wrKEzS0Izy01S8QxaYnL5I=
+
 mime-types@^2.1.12, mime-types@~2.1.19, mime-types@~2.1.24:
   version "2.1.25"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.25.tgz#39772d46621f93e2a80a856c53b86a62156a6437"
   integrity sha512-5KhStqB5xpTAeGqKBAMgwaYMnQik7teQN4IAzC7npDv6kzeU6prfkR67bc87J1kWMPGkoaZSq1npmexMgkmEVg==
   dependencies:
     mime-db "1.42.0"
+
+mime-types@^2.1.26:
+  version "2.1.27"
+  resolved "https://registry.npm.taobao.org/mime-types/download/mime-types-2.1.27.tgz?cache=0&sync_timestamp=1587700357177&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmime-types%2Fdownload%2Fmime-types-2.1.27.tgz#47949f98e279ea53119f5722e0f34e529bec009f"
+  integrity sha1-R5SfmOJ56lMRn1ci4PNOUpvsAJ8=
+  dependencies:
+    mime-db "1.44.0"
 
 mime@1.6.0, mime@^1.4.1:
   version "1.6.0"
@@ -6535,14 +6548,6 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-schema-utils@^2.5.0:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.6.1.tgz#eb78f0b945c7bcfa2082b3565e8db3548011dc4f"
-  integrity sha512-0WXHDs1VDJyo+Zqs9TKLKyD/h7yDpHUhEFsM2CzkICFdoX1av+GBq/J2xRTFfsQO5kBfhZzANf2VcIm84jqDbg==
-  dependencies:
-    ajv "^6.10.2"
-    ajv-keywords "^3.4.1"
-
 schema-utils@^2.6.5:
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.6.5.tgz#c758f0a7e624263073d396e29cd40aa101152d8a"
@@ -7394,14 +7399,14 @@ urix@^0.1.0:
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
-url-loader@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-3.0.0.tgz#9f1f11b371acf6e51ed15a50db635e02eec18368"
-  integrity sha512-a84JJbIA5xTFTWyjjcPdnsu+41o/SNE8SpXMdUvXs6Q+LuhCD9E2+0VCiuDWqgo3GGXVlFHzArDmBpj9PgWn4A==
+url-loader@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.npm.taobao.org/url-loader/download/url-loader-4.1.0.tgz#c7d6b0d6b0fccd51ab3ffc58a78d32b8d89a7be2"
+  integrity sha1-x9aw1rD8zVGrP/xYp40yuNiae+I=
   dependencies:
-    loader-utils "^1.2.3"
-    mime "^2.4.4"
-    schema-utils "^2.5.0"
+    loader-utils "^2.0.0"
+    mime-types "^2.1.26"
+    schema-utils "^2.6.5"
 
 url@^0.11.0:
   version "0.11.0"
@@ -7509,10 +7514,10 @@ watchpack@^1.6.1:
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
 
-webpack-bundle-analyzer@^3.7.1:
+webpack-bundle-analyzer@^3.7.0:
   version "3.7.0"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.7.0.tgz#84da434e89442899b884d9ad38e466d0db02a56f"
-  integrity sha512-mETdjZ30a3Yf+NTB/wqTgACK7rAYQl5uxKK0WVTNmF0sM3Uv8s3R58YZMW7Rhu0Lk2Rmuhdj5dcH5Q76zCDVdA==
+  resolved "https://registry.npm.taobao.org/webpack-bundle-analyzer/download/webpack-bundle-analyzer-3.7.0.tgz?cache=0&sync_timestamp=1586846559504&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack-bundle-analyzer%2Fdownload%2Fwebpack-bundle-analyzer-3.7.0.tgz#84da434e89442899b884d9ad38e466d0db02a56f"
+  integrity sha1-hNpDTolEKJm4hNmtOORm0NsCpW8=
   dependencies:
     acorn "^7.1.1"
     acorn-walk "^7.1.1"
