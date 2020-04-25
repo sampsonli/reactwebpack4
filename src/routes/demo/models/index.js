@@ -1,46 +1,27 @@
 import {deliver} from 'react-deliverer';
 
-function wait(time) {
+function ajax(time) {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(1);
+            resolve(parseInt(Math.random() * 100, 10));
         }, time);
     });
 }
 
-@deliver('hello')
+@deliver('demo')
 class HomeModel {
-    #running = false;
+    #loading = false;
 
-    #time = 1;
+    #info;
 
     #a = 1;
 
     #b = 11;
 
-
-    * getTime() {
-        console.log(this.#time);
-        this.#time = 1;
-        try {
-            yield wait(1000);
-            this.a.b = 2;
-            this.#time = 0;
-        } catch (e) {
-            console.log(e.message);
-            this.#time = 2;
-            yield wait(1000);
-            this.#time = 3;
-            throw e;
-        }
-    }
-
-    changeRunning() {
-        this.#running = true;
-    }
-
-    print() {
-        console.log(this.#time);
+    * init() {
+        this.#loading = true;
+        this.#info = yield ajax(2000);
+        this.#loading = false;
     }
 }
 export default new HomeModel();

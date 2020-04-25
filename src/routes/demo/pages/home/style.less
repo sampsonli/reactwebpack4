@@ -13,6 +13,7 @@
         background: linear-gradient(to right, transparent 35%, rgba(255, 255, 255, .6), transparent 65%);
         content: '';
         position: absolute;
+        z-index: 0;
         top: 0;
         left: 0;
         width:100%;
@@ -27,7 +28,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .content {
+        z-index: 10;
         //display: none;
         color: white;
         font-size: .35rem;
