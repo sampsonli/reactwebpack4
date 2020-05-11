@@ -55,6 +55,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-webpack-dynamic-import": "^1.0.1",
+    "compression": "^1.7.4",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
