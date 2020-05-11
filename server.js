@@ -26,7 +26,7 @@ const {PORT} = process.env; // 服务启动端口号
 if (env === 'production') {
     // 如果是生产环境，则运行build文件夹中的代码
     app.use(compression());
-    app.use('/', express.static('dist', {
+    app.use(express.static('dist', {
         maxAge: '1d',
         setHeaders(res, file) {
             if (file.indexOf('index.html') > -1) {
