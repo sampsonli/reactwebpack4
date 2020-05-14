@@ -1,4 +1,4 @@
-export default (src) => {
+export default (src, attr = '') => {
     if (!window.__loaded) {
         window.__loaded = {};
     }
@@ -9,13 +9,13 @@ export default (src) => {
             element.src = src;
             element.onload = () => {
                 window.__loaded[src] = true;
-                resolve();
+                resolve(attr && window[attr]);
             };
-            element.onerror = () => {
-                reject();
+            element.onerror = (e) => {
+                reject(e);
             };
         } else {
-            resolve();
+            resolve(attr && window[attr]);
         }
     });
 };

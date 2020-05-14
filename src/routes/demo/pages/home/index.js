@@ -15,15 +15,15 @@ export default () => {
     return (
         <div className={style.container}>
             <div className={style.content}>
-                <div className={style.txt} onClick={() => model.setData({a: a + 1, b: b + 2})}>
+                <div className={style.txt} onClick={() => model.setData({a: a + 2, b: b + 2})}>
                     2020年--
                     {`a:${a}, b:${b}`}
                 </div>
-                {loading ? <div className={style.txtTest}>加载中</div> : (
-                    <div className={style.txtTest}>
-                        {info}
-                    </div>
-                )}
+
+                <div className={style.txtTest}>
+                    {loading ? 'loading ' : info}
+                </div>
+
             </div>
 
 

@@ -16,7 +16,7 @@ class HomeModel {
 
     #a = 3;
 
-    #b = 11;
+    #b = 12;
 
     * init() {
         this.#loading = true;
