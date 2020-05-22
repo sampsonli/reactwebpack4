@@ -110,7 +110,7 @@ module.exports = {
             context: ctxPath,
             manifest: vendorManifest,
         }), */
-        new CopyWebpackPlugin([{from: path.join(ctxPath, 'static'), flatten: false}]),
+        new CopyWebpackPlugin({patterns: [{from: path.join(ctxPath, 'static'), flatten: false}]}),
         new HtmlWebpackPlugin({
             // 根据模板插入css/js等生成最终HTML
             filename: 'index.html', // 生成的html存放路径，相对于 output.path

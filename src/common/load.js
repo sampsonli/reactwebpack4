@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (loadComp, loadingComp = () => null) => (
+export default (loadComp, LoadingComp = () => null) => (
     class AsyncComponent extends React.Component {
         constructor(args) {
             super(args);
@@ -33,7 +33,7 @@ export default (loadComp, loadingComp = () => null) => (
         render() {
             const {Component, hot} = this.state;
             // eslint-disable-next-line react/jsx-props-no-spreading
-            return (Component) ? <Component {...this.props} hot={hot} /> : loadingComp();
+            return (Component) ? <Component {...this.props} hot={hot} /> : <LoadingComp {...this.props} />;
         }
     }
 );
