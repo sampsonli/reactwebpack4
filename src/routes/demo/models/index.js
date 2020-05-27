@@ -1,4 +1,5 @@
 import {deliver} from 'react-deliverer';
+import Base from './base';
 
 function ajax(time) {
     return new Promise((resolve) => {
@@ -9,13 +10,17 @@ function ajax(time) {
 }
 
 @deliver('demo')
-class HomeModel {
+class HomeModel extends Base {
     #loading = false;
 
     #info;
 
-    #a = 3;
+    #a = 3; // 测试数据
 
+    /**
+     * 测试数据
+     * @type {number}
+     */
     #b = 12;
 
     * init() {

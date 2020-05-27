@@ -10,7 +10,7 @@ export default () => {
         model.init();
     }, [location.search]);
     const {
-        a, b, info, loading,
+        a, b, info, loading, name,
     } = data;
     return (
         <div className={style.container}>
@@ -18,9 +18,11 @@ export default () => {
                 <div className={style.txt} onClick={() => model.setData({a: a + 2, b: b + 2})}>
                     2020年--
                     {`a:${a}, b:${b}`}
+-
+                    {name}
                 </div>
 
-                <div className={style.txtTest}>
+                <div className={style.txtTest} onClick={model.changeName}>
                     {loading ? 'loading ' : info}
                 </div>
 
