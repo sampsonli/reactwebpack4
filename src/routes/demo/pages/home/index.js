@@ -22,7 +22,7 @@ export default () => {
                     {name}
                 </div>
 
-                <div className={style.txtTest} onClick={model.changeName}>
+                <div className={style.txtTest} onClick={() => model.changeName()}>
                     {loading ? 'loading ' : info}
                 </div>
 
