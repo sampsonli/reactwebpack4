@@ -1,7 +1,7 @@
 class Base {
     #name = 'lichun2';
 
-    changeName(name) {
+    changeName(name = 'hello') {
         this.#name = name;
     }
 }
