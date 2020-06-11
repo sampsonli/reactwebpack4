@@ -11,8 +11,6 @@ function ajax(time) {
 
 @deliver('demo')
 class HomeModel extends Base {
-    #loading = false;
-
     #info;
 
     #a = 3; // 测试数据
@@ -24,9 +22,11 @@ class HomeModel extends Base {
     #b = 12;
 
     * init() {
-        this.#loading = true;
         this.#info = yield ajax(2000);
-        this.#loading = false;
+        this.#info = yield ajax(2000);
+        this.#info = yield ajax(2000);
+        this.#info = yield ajax(2000);
+        this.#info = yield ajax(2000);
     }
 }
 export default new HomeModel();

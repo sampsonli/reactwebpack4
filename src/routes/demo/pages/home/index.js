@@ -1,16 +1,14 @@
 import React, {useEffect} from 'react';
-import {useLocation} from 'react-router-dom';
 import style from './style.less';
 import model from '../../models';
 
 export default () => {
     const data = model.useData();
-    const location = useLocation();
     useEffect(() => {
         model.init();
-    }, [location.search]);
+    }, []);
     const {
-        a, b, info, loading, name,
+        a, b, info, name,
     } = data;
     return (
         <div className={style.container}>
@@ -23,7 +21,7 @@ export default () => {
                 </div>
 
                 <div className={style.txtTest} onClick={() => model.changeName()}>
-                    {loading ? 'loading ' : info}
+                    {info}
                 </div>
 
             </div>
