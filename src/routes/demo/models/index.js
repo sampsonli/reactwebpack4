@@ -1,32 +1,34 @@
 import {deliver} from 'react-deliverer';
-import Base from './base';
 
-function ajax(time) {
+function wait(time) {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(parseInt(Math.random() * 100, 10));
+            resolve(time);
         }, time);
     });
 }
 
 @deliver('demo')
-class HomeModel extends Base {
-    #info;
+class HomeModel {
+    loading = false;
 
-    #a = 3; // 测试数据
+    #result = '888';
 
-    /**
-     * 测试数据
-     * @type {number}
-     */
-    #b = 12;
-
-    * init() {
-        this.#info = yield ajax(2000);
-        this.#info = yield ajax(2000);
-        this.#info = yield ajax(2000);
-        this.#info = yield ajax(2000);
-        this.#info = yield ajax(2000);
+    * drawLottery() {
+        if (this.loading) {
+            return;
+        }
+        this.loading = true;
+        let i = 50;
+        while (i--) {
+            [, this.#result] = String(Math.random().toFixed(3)).split('.');
+            if (i < 10) {
+                yield wait((10 - i) * 100);
+            } else {
+                yield wait(100);
+            }
+        }
+        this.loading = false;
     }
 }
 export default new HomeModel();
