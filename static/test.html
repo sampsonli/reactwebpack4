@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function get(url, fn) {
+        // XMLHttpRequest对象用于在后台与服务器交换数据
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.onreadystatechange = function() {
+            // readyState == 4说明请求已完成
+            if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 304) {
+                // 从服务器获得数据
+                fn.call(this, xhr.responseText);
+            }
+        };
+        xhr.send();
+    }
+
+    get('http://172.16.9.65:808/UploadVideo/Upload', function (res) {
+
+        alert(res);
+    })
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
