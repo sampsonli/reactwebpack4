@@ -10,10 +10,9 @@ export default (loadComp, LoadingComp = () => null) => (
             };
         }
 
-        // eslint-disable-next-line camelcase
-        UNSAFE_componentWillMount() {
-            // eslint-disable-next-line react/destructuring-assignment
-            if (this.state.Component) {
+        componentDidMount() {
+            const {Component} = this.state;
+            if (Component) {
                 return;
             }
 
@@ -25,8 +24,7 @@ export default (loadComp, LoadingComp = () => null) => (
                     this.setState({Component: comp.default ? comp.default : comp}); // 提高兼容性
                 })
                 .catch((err) => {
-                    console.error('Cannot load component in async component');
-                    throw err;
+                    console.error('Cannot load component in async component. ', err.message);
                 });
         }
 
