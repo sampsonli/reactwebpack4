@@ -1,4 +1,5 @@
 import {deliver} from 'react-deliverer';
+import loadCss from '~/common/loadCss';
 
 function wait(time) {
     return new Promise((resolve) => {
@@ -13,6 +14,14 @@ class HomeModel {
     loading = false;
 
     #result = '888';
+
+    init() {
+
+    }
+
+    loadStyle() {
+        loadCss('test.css');
+    }
 
     * drawLottery() {
         if (this.loading) {
