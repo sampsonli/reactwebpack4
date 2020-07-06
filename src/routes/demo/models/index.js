@@ -19,8 +19,11 @@ class HomeModel {
 
     }
 
-    loadStyle() {
-        loadCss('test.css');
+    * loadStyle() {
+        const remove = yield loadCss('test.css');
+        console.log('hello');
+        yield wait(3000);
+        remove();
     }
 
     * drawLottery() {
@@ -28,11 +31,11 @@ class HomeModel {
             return;
         }
         this.loading = true;
-        let i = 50;
+        let i = 30;
         while (i--) {
             [, this.#result] = String(Math.random().toFixed(3)).split('.');
-            if (i < 10) {
-                yield wait((10 - i) * 100);
+            if (i < 6) {
+                yield wait((6 - i) * 100);
             } else {
                 yield wait(100);
             }

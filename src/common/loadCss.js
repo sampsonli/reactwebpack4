@@ -11,7 +11,10 @@ export default (src) => {
         document.head.appendChild(element);
         element.href = src;
         element.onload = () => {
-            resolve();
+            resolve(() => {
+                delete window.__loadedCss[src];
+                document.head.removeChild(element);
+            });
         };
         element.onerror = (e) => {
             reject(e);
