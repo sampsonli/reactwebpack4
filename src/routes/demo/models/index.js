@@ -21,7 +21,6 @@ class HomeModel {
 
     * loadStyle() {
         const remove = yield loadCss('test.css');
-        console.log('hello');
         yield wait(3000);
         remove();
     }

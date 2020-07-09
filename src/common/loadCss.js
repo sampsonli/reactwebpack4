@@ -8,8 +8,9 @@ export default (src) => {
     window.__loadedCss[src] = new Promise((resolve, reject) => {
         const element = document.createElement('link');
         element.setAttribute('rel', 'stylesheet');
-        document.head.appendChild(element);
         element.href = src;
+        document.head.appendChild(element);
+        element.setAttribute('rel', 'stylesheet');
         element.onload = () => {
             resolve(() => {
                 delete window.__loadedCss[src];
