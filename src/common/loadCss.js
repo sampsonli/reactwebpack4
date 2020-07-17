@@ -13,8 +13,14 @@ export default (src) => {
         element.setAttribute('rel', 'stylesheet');
         element.onload = () => {
             resolve(() => {
-                delete window.__loadedCss[src];
-                document.head.removeChild(element);
+                if (window.__loadedCss[src]) {
+                    delete window.__loadedCss[src];
+                    try {
+                        document.head.removeChild(element);
+                    } catch (e) {
+                        console.warn(e.message);
+                    }
+                }
             });
         };
         element.onerror = (e) => {

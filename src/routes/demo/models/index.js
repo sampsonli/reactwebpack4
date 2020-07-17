@@ -32,7 +32,7 @@ class HomeModel {
         this.loading = true;
         let i = 30;
         while (i--) {
-            [, this.#result] = String(Math.random().toFixed(3)).split('.');
+            [, this.#result] = String(Math.random().toFixed(6)).split('.');
             if (i < 6) {
                 yield wait((6 - i) * 100);
             } else {

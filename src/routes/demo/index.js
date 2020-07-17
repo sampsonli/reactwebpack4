@@ -4,7 +4,6 @@ import load from '~/common/load';
 
 const Home = load(() => import('./pages/home'));
 
-
 export default () => {
     const match = useRouteMatch();
     return (
