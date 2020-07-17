@@ -23,6 +23,7 @@ class HomeModel {
         const remove = yield loadCss('test.css');
         yield wait(3000);
         remove();
+        console.log(this.setData);
     }
 
     * drawLottery() {

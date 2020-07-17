@@ -1,11 +1,14 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
+import {useData} from 'react-deliverer';
 import style from './style.less';
 import model from '../../models';
 
 export default () => {
-    const data = model.useData();
+    const data = useData(model.ns);
+    const [num] = useState(() => 123);
     useEffect(() => {
         model.init();
+        console.log(num);
     }, []);
     const {
         result,
