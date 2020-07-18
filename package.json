@@ -6,7 +6,6 @@
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "core-js": "^3.6.5",
-    "konva": "^7.0.3",
     "moment": "^2.27.0",
     "prop-types": "^15.6.2",
     "react": "^16.13.1",
