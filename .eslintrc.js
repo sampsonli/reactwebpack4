@@ -12,7 +12,8 @@ module.exports = {
         'react',
     ],
     rules: {
-        indent: [2, 4, { SwitchCase: 1 }],
+        indent: 'off',
+        'template-curly-spacing': 'off',
         'object-curly-spacing': [0, 'never'],
         'global-require': 'off',
         'import/no-unresolved': 'off',

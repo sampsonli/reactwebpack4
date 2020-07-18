@@ -16,36 +16,12 @@ export default () => {
             <div className={style.header}>自定义滚动测试1</div>
             <div className={style.content} ref={model.initList}>
                 <ul className={`${style.list} list`}>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
-                    <li className={style.item}>list item</li>
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(key => (
+                        <li key={key} className={style.item}>
+                        list item-
+                        {key}
+                        </li>
+                    ))}
                 </ul>
             </div>
 
