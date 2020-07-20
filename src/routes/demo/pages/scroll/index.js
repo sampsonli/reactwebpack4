@@ -11,12 +11,16 @@ export default () => {
         loading,
     } = data;
     if (loading) return '';
+    const list = [];
+    for (let i = 0; i < 100; i++) {
+        list.push(i);
+    }
     return (
         <div className={style.container}>
             <div className={style.header}>自定义滚动测试1</div>
             <div className={style.content} ref={model.initList}>
                 <ul className={`${style.list} list`}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(key => (
+                    {list.map(key => (
                         <li key={key} className={style.item}>
                         list item-
                         {key}
