@@ -12,14 +12,14 @@ export default () => {
     } = data;
     if (loading) return '';
     const list = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 1000; i++) {
         list.push(i);
     }
     return (
         <div className={style.container}>
             <div className={style.header}>自定义滚动测试1</div>
-            <div className={style.content} ref={model.initList}>
-                <ul className={`${style.list} list`}>
+            <div className={style.content} ref={model.initScroll}>
+                <ul className={style.list}>
                     {list.map(key => (
                         <li key={key} className={style.item}>
                         list item-
