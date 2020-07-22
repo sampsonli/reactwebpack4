@@ -6241,10 +6241,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-deliverer@^3.1.24:
-  version "3.1.24"
-  resolved "https://registry.npm.taobao.org/react-deliverer/download/react-deliverer-3.1.24.tgz#b1af32fde1c6ecf7242c8c08c25c0916cc6dfb53"
-  integrity sha1-sa8y/eHG7PckLIwIwlwJFsxt+1M=
+react-deliverer@^3.1.25:
+  version "3.1.25"
+  resolved "https://registry.npm.taobao.org/react-deliverer/download/react-deliverer-3.1.25.tgz#f7ba5643e5b82aec1a49017ba19a595df328729e"
+  integrity sha1-97pWQ+W4KuwaSQF7oZpZXfMocp4=
 
 react-dom@^16.13.1:
   version "16.13.1"
