@@ -5916,6 +5916,11 @@ pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
+pixi@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.npm.taobao.org/pixi/download/pixi-0.3.1.tgz#858cd6164a32a1e4b41192cdf5c6d98209300ba8"
+  integrity sha1-hYzWFkoyoeS0EZLN9cbZggkwC6g=
+
 pkg-dir@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
