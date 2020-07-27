@@ -12,6 +12,7 @@ export default () => {
     } = data;
     if (loading) return '';
     return (
-        <div className={style.container} ref={model.initList} />
+        // <div className={style.container} ref={model.initList} />
+        <div className={style.container} ref={model.initMatter} />
     );
 };
