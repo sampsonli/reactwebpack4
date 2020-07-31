@@ -13,7 +13,7 @@ export default () => {
         <div className={style.containerTf}>
             <div className={style.content}>
                 {loading}
-                -tf
+                -tf23
             </div>
 
         </div>
