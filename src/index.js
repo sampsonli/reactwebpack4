@@ -11,8 +11,10 @@ import Router from './router';
 import store from './store';
 
 import './assets/common.css';
+import spring from './common/spring';
 
 deliverer(store);
+spring(store);
 
 const render = () => {
     ReactDOM.render(

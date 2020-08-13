@@ -1,18 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import {useData} from 'react-deliverer';
 import style from './style.less';
-import model from '../../models';
+import {useModel} from '~/common/spring';
+import HomeModel from '../../models/Home';
 
 export default () => {
-    const data = useData(model.ns);
-    const [num] = useState(() => 123);
+    const model = useModel(HomeModel);
     useEffect(() => {
         model.init();
-        console.log(num);
     }, []);
     const {
         result,
-    } = data;
+    } = model;
     return (
         <div className={style.container}>
             <div className={style.content}>
@@ -20,11 +18,11 @@ export default () => {
                     开始摇奖
                 </div>
 
-                <div className={style.txt} onClick={model.loadStyle}>
+                <div className={style.txt}>
                     开始加载样式
                 </div>
 
-                <div className={style.txtTest} onClick={() => model.changeName()}>
+                <div className={style.txtTest}>
                     开奖号码：
                     {result}
                 </div>
