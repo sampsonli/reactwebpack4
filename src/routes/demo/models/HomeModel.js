@@ -16,7 +16,7 @@ class HomeModel {
     result = '888';
 
     init() {
-        this.result = 234;
+        this.result = 2342;
         console.log(this.user);
     }
 
