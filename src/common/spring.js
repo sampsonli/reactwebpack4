@@ -18,11 +18,10 @@ function injectReducer(key, reducer) {
 const allProto = {};
 const allBeans = {};
 
-export function resource(ns) {
+export function Resource(ns) {
     return (Clazz) => {
       const Result = function (...args) {
         const instance = new Clazz(...args);
-        console.log(instance);
         const __wired = Clazz.prototype.__wired || {};
         delete Clazz.prototype.__wired;
         if (!ns) {
@@ -53,11 +52,16 @@ export function resource(ns) {
               const _this = Object.create(_prototype);
               if (origin.prototype.toString() === '[object Generator]') {
                 const runGen = (ge, val, isError, e) => {
-                  const state = _store.getState()[ns];
+                  const rootState = _store.getState();
+                  const state = rootState[ns];
                   const _state = {};
                   Object.keys(state).forEach((_key) => {
-                    _this[_key] = state[_key];
-                    _state[_key] = state[_key];
+                    if (__wired[key]) {
+                      _this[_key] = rootState[__wired[key]];
+                    } else {
+                      _this[_key] = state[_key];
+                    }
+                    _state[_key] = _this[_key];
                   });
                   let tmp;
                   try {
@@ -81,11 +85,16 @@ export function resource(ns) {
                 };
                 return Promise.resolve().then(() => runGen(origin.bind(_this)(...params), null, false, null));
               }
-              const state = _store.getState()[ns];
+              const rootState = _store.getState();
+              const state = rootState[ns];
               let _state = {};
               Object.keys(state).forEach(_key => {
-                _this[_key] = state[_key];
-                _state[_key] = state[_key];
+                if (__wired[key]) {
+                  _this[_key] = rootState[__wired[key]];
+                } else {
+                  _this[_key] = state[_key];
+                }
+                _state[_key] = _this[_key];
               });
               const result = origin.bind(_this)(...params);
               if (result && typeof result.then === 'function') {
@@ -116,6 +125,7 @@ export function resource(ns) {
           const keys = Object.keys(props);
           if (keys.some(key => props[key] !== state[key])) {
             const _state = {...state, ...props};
+            Object.setPrototypeOf(_state, allProto[ns]);
             _store.dispatch({type: `spring/${ns}`, payload: _state});
           }
         };
@@ -142,21 +152,14 @@ export function resource(ns) {
         prototype.reset = function () {
           _store.dispatch({type: `spring/${ns}`, payload: initState});
         };
-
+        const rootState = _store.getState();
         Object.getOwnPropertyNames(instance).forEach(key => {
           if (key.indexOf('_') === 0) {
             prototype[key] = instance[key];
             return;
           }
           if (__wired[key]) {
-            console.log(_store.getState()[__wired[key]]);
-            Object.defineProperty(prototype, key, {
-              get: () => {
-                console.log(__wired[key]);
-                // return _store.getState()[__wired[key]];
-                return 111;
-              },
-            });
+            initState[key] = rootState[__wired[key]];
             return;
           }
           initState[key] = instance[key];
@@ -190,11 +193,12 @@ export const useModel = (T) => {
 
   return data;
 };
+export const Controller = Resource;
 export const resetModel = (T) => {
   allProto[T.ns].reset();
 };
 
-export function autoWired(T) {
+export function AutoWired(T) {
   return (clazz, attr) => {
     if (!clazz.__wired) {
       clazz.__wired = {};

@@ -1,5 +1,4 @@
-import loadCss from '~/common/loadCss';
-import {autoWired, resource} from '~/common/spring';
+import {AutoWired, Controller} from '~/common/spring';
 import UserModel from '~/routes/demo/models/User';
 
 function wait(time) {
@@ -10,7 +9,7 @@ function wait(time) {
     });
 }
 
-@resource('home1')
+@Controller('home1')
 class HomeModel {
     loading = false;
 
@@ -18,10 +17,9 @@ class HomeModel {
 
     init() {
         this.result = 234;
-        console.log(this.user);
     }
 
-    @autoWired(UserModel) user;
+    @AutoWired(UserModel) user;
 
     * drawLottery() {
         if (this.loading) {

@@ -1,14 +1,6 @@
-import {autoWired, resource} from '~/common/spring';
+import {Resource} from '~/common/spring';
 
-function wait(time) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(time);
-    }, time);
-  });
-}
-
-@resource('user')
+@Resource('usermodel')
 class UserModel {
   name = 'lichun';
 }
