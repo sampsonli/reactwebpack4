@@ -4,16 +4,14 @@ import 'core-js/modules/es.object.assign';
 import 'core-js/modules/es.promise';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import deliverer from 'react-deliverer';
+import spring from 'redux-spring';
 import { Provider } from 'react-redux';
 import loadjs from '~/common/loadjs';
 import Router from './router';
 import store from './store';
 
 import './assets/common.css';
-import spring from './common/spring';
 
-deliverer(store);
 spring(store);
 
 const render = () => {

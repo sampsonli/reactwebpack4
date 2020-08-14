@@ -1,4 +1,4 @@
-import {Resource} from '~/common/spring';
+import {Resource} from 'redux-spring';
 
 @Resource('usermodel')
 class UserModel {

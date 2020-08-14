@@ -1,12 +1,12 @@
-import {deliver} from 'react-deliverer';
+import {Controller} from 'redux-spring';
 import Scroll from '~/common/scroll';
 
-@deliver('scroll')
+@Controller('scroll')
 class ScrollModel {
-    #loading = false;
+    loading = false;
 
     init() {
-        this.#loading = false;
+        this.loading = false;
     }
 
     testClick() {
@@ -49,4 +49,4 @@ class ScrollModel {
         }
     }
 }
-export default new ScrollModel();
+export default ScrollModel;

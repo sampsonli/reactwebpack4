@@ -1,4 +1,4 @@
-import {AutoWired, Controller} from '~/common/spring';
+import {AutoWired, Controller} from 'redux-spring';
 import UserModel from '~/routes/demo/models/User';
 
 function wait(time) {
@@ -19,7 +19,8 @@ class HomeModel {
         this.result = 234;
     }
 
-    @AutoWired(UserModel) user;
+    @AutoWired(UserModel)
+    user;
 
     * drawLottery() {
         if (this.loading) {

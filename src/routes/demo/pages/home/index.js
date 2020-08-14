@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
+import {useModel} from 'redux-spring';
 import style from './style.less';
-import {useModel} from '~/common/spring';
+
 import HomeModel from '../../models/Home';
 
 export default () => {
