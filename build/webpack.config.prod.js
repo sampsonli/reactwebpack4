@@ -26,23 +26,12 @@ module.exports = {
         rules: [
             {
                 // .js .jsx用babel解析
-                test: /\.jsx?$/,
+                test: /\.[tj]sx?$/,
                 include: srcPath,
+                exclude: /node_modules/,
                 use: [
                     'babel-loader',
                 ],
-            },
-            {
-                test: /\.(ts|tsx)$/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                    },
-                    {
-                        loader: 'ts-loader',
-                    },
-                ],
-                include: srcPath,
             },
             {
                 // .less 解析
