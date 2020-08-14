@@ -16,15 +16,16 @@ class HomeModel {
     result = '888';
 
     init() {
-        this.result = 2342;
-        console.log(this.user);
+        this.result = '2342';
+        // console.log(this.user);
     }
 
     @AutoWired(UserModel)
-    user;
+    user = null;
 
     changeName() {
-        this.user.name = 'hello';
+        // this.user.name = 'hello';
+        console.log(this.user);
     }
 
     * drawLottery() {

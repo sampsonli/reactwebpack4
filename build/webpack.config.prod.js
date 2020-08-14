@@ -33,6 +33,18 @@ module.exports = {
                 ],
             },
             {
+                test: /\.(ts|tsx)$/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                    },
+                    {
+                        loader: 'ts-loader',
+                    },
+                ],
+                include: srcPath,
+            },
+            {
                 // .less 解析
                 test: /\.(less|css)$/,
                 include: /(node_modules|assets)/,
@@ -96,7 +108,7 @@ module.exports = {
         alias: {
             '~': srcPath,
         },
-        extensions: ['*', '.js', '.jsx', '.json'],
+        extensions: ['*', '.js', '.jsx', '.ts', '.tsx', '.json'],
     },
 
     plugins: [

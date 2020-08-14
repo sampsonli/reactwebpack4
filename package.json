@@ -16,7 +16,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-spring": "^1.0.1"
+    "redux-spring": "^1.0.3"
   },
   "scripts": {
     "build": "rimraf dist/* && webpack",
@@ -79,6 +79,8 @@
     "postcss-loader": "^3.0.0",
     "rimraf": "^3.0.2",
     "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-bundle-analyzer": "^3.8.0",
