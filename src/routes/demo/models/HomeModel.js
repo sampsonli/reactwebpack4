@@ -1,5 +1,5 @@
 import {AutoWired, Controller} from 'redux-spring';
-import UserModel from '~/routes/demo/models/User';
+import UserModel from '~/routes/demo/models/UserModel';
 
 function wait(time) {
     return new Promise((resolve) => {
@@ -17,10 +17,15 @@ class HomeModel {
 
     init() {
         this.result = 234;
+        console.log(this.user);
     }
 
     @AutoWired(UserModel)
     user;
+
+    changeName() {
+        this.user.name = 'hello';
+    }
 
     * drawLottery() {
         if (this.loading) {
