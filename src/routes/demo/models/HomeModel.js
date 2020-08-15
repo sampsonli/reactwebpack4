@@ -1,4 +1,4 @@
-import {Autowired, Controller} from 'redux-spring';
+import {inject, model, Model} from 'redux-spring';
 import UserModel from './UserModel';
 
 function wait(time) {
@@ -9,8 +9,8 @@ function wait(time) {
     });
 }
 
-@Controller('home1')
-class HomeModel {
+@model('home1')
+class HomeModel extends Model {
     loading = false;
 
     result = '888';
@@ -23,7 +23,7 @@ class HomeModel {
         // console.log(this.user);
     }
 
-    @Autowired(UserModel)
+    @inject(UserModel)
     user;
 
     changeName() {
