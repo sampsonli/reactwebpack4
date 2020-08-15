@@ -11,7 +11,6 @@ export default () => {
     } = model;
     useEffect(() => {
         model.init();
-        console.log(model);
     }, []);
     // model.init()
     return (
