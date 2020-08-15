@@ -19,8 +19,7 @@ export default () => {
                     开始摇奖
                 </div>
 
-                <div className={style.txt} onClick={changeName}>
-                </div>
+                <div className={style.txt} onClick={changeName} />
 
                 <div className={style.txtTest}>
                     开奖号码：

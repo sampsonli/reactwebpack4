@@ -15,6 +15,9 @@ class HomeModel {
 
     result = '888';
 
+    /**
+     * 初始化方法调用
+     */
     init() {
         this.result = '2342';
         // console.log(this.user);
