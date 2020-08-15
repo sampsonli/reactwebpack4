@@ -7,7 +7,7 @@ import HomeModel from '../../models/HomeModel';
 export default () => {
     const model = useModel(HomeModel);
     const {
-        result,
+        result, user,
     } = model;
     useEffect(() => {
         model.init();
@@ -21,7 +21,7 @@ export default () => {
                 </div>
 
                 <div className={style.txt} onClick={model.changeName}>
-                    {HomeModel.ns}
+                    {user.name}
                 </div>
 
                 <div className={style.txtTest}>

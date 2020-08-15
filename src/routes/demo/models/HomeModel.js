@@ -27,8 +27,7 @@ class HomeModel extends Model {
     user;
 
     changeName() {
-        // this.user.name = 'hello';
-        console.log(this.user);
+        this.user.setData({name: `${Math.random().toFixed(4)}`});
     }
 
     * drawLottery() {
