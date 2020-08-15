@@ -5,20 +5,22 @@ import style from './style.less';
 import HomeModel from '../../models/HomeModel';
 
 export default () => {
+    const model = useModel(HomeModel);
     const {
-        result, drawLottery, init, user, changeName,
-    } = useModel(HomeModel);
+        result, user,
+    } = model;
     useEffect(() => {
-        init();
+        model.init();
     }, []);
+    // model.init()
     return (
         <div className={style.container}>
             <div className={style.content}>
-                <div className={style.txt} onClick={drawLottery}>
+                <div className={style.txt} onClick={model.drawLottery}>
                     开始摇奖
                 </div>
 
-                <div className={style.txt} onClick={changeName}>
+                <div className={style.txt} onClick={model.changeName}>
                     {user.name}
                 </div>
 
