@@ -8,7 +8,6 @@ function wait(time) {
         }, time);
     });
 }
-
 @model('home1')
 class HomeModel extends Model {
     loading = false;
@@ -25,7 +24,7 @@ class HomeModel extends Model {
     }
 
     @inject(UserModel)
-    user;
+    user: UserModel;
 
     changeName() {
         this.user.setData({name: `${Math.random().toFixed(4)}`});
@@ -48,4 +47,5 @@ class HomeModel extends Model {
         this.loading = false;
     }
 }
+
 export default HomeModel;

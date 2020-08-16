@@ -1,7 +1,7 @@
-import {model} from 'redux-spring';
+import {Model, model} from 'redux-spring';
 
 @model('usermodel')
-class UserModel {
+class UserModel extends Model {
   name = 'lichun';
 }
 export default UserModel;
