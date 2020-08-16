@@ -24,7 +24,7 @@ class HomeModel extends Model {
     }
 
     @inject(UserModel)
-    user: UserModel;
+    user;
 
     changeName() {
         this.user.setData({name: `${Math.random().toFixed(4)}`});
@@ -47,5 +47,4 @@ class HomeModel extends Model {
         this.loading = false;
     }
 }
-
 export default HomeModel;
