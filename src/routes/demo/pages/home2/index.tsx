@@ -7,10 +7,11 @@ import HomeModel from '../../models/HomeModel';
 export default () => {
     const model = useModel(HomeModel);
     const {
-        result, drawLottery, changeName,
+        result, drawLottery, changeName, user,
     } = model;
     useEffect(() => {
         model.init();
+        console.log(user);
     }, []);
     return (
         <div className={style.container}>

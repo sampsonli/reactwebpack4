@@ -23,8 +23,11 @@ class HomeModel extends Model {
         // console.log(this.user);
     }
 
-    @inject(UserModel)
-    user;
+    /**
+     * inject user
+     * @type {UserModel}
+     */
+    @inject(UserModel) user;
 
     changeName() {
         this.user.setData({name: `${Math.random().toFixed(4)}`});
