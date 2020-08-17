@@ -8,6 +8,7 @@ function wait(time) {
         }, time);
     });
 }
+
 @model('home1')
 class HomeModel extends Model {
     loading = false;
@@ -24,7 +25,6 @@ class HomeModel extends Model {
     }
 
     /**
-     * inject user
      * @type {UserModel}
      */
     @inject(UserModel) user;
