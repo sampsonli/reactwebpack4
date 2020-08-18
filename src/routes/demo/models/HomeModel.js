@@ -1,4 +1,4 @@
-import {inject, model, Model} from 'redux-spring';
+import {inject, service, Model} from 'redux-spring';
 import UserModel from './UserModel';
 
 function wait(time) {
@@ -9,7 +9,7 @@ function wait(time) {
     });
 }
 
-@model('home1')
+@service('home1')
 class HomeModel extends Model {
     loading = false;
 

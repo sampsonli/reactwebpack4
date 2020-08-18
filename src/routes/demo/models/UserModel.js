@@ -1,6 +1,6 @@
-import {Model, model} from 'redux-spring';
+import {Model, service} from 'redux-spring';
 
-@model('usermodel')
+@service('usermodel')
 class UserModel extends Model {
   name = 'lichun';
 }
