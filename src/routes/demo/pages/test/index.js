@@ -8,10 +8,8 @@ import HomeModel from '../../models/HomeModel';
 class Test extends Component {
   render() {
     const {
-      /** @type HomeModel */
       model,
     } = this.props;
-
     const {result, user} = model;
     return (
       <div className={style.container}>

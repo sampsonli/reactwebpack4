@@ -19,9 +19,7 @@ class HomeModel extends Model {
      * 初始化方法调用
      */
     init() {
-        console.log('reload ini367');
         this.result = '2343';
-        // console.log(this.user);
     }
 
     /**
