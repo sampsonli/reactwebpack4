@@ -1,7 +1,7 @@
-import {Controller} from 'redux-spring';
+import {service} from 'redux-spring';
 import Scroll from '~/common/scroll';
 
-@Controller('scroll')
+@service('scroll')
 class ScrollModel {
     loading = false;
 

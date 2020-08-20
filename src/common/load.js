@@ -1,5 +1,12 @@
 import React from 'react';
 
+/**
+ * @desc 动态加载组件
+ * @template T - 组件类型
+ * @param {function(): Promise<{default: T}>} loadComp - 需要要加载的组件
+ * @param LoadingComp - 加载过程中展示的内容
+ * @returns {T} - 被加载组件的代理
+ */
 export default (loadComp, LoadingComp = () => null) => (
     class AsyncComponent extends React.Component {
         constructor(args) {
