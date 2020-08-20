@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropType from 'prop-types';
 import {connect} from 'react-redux';
 import style from './style.less';
 
@@ -7,7 +8,7 @@ import HomeModel from '../../models/HomeModel';
 /**
  * @extends {Component<{model: HomeModel}>}
  */
-class Test extends Component<{model: HomeModel}> {
+class Test extends Component {
   render() {
     const {
       model,
@@ -35,4 +36,7 @@ class Test extends Component<{model: HomeModel}> {
     );
   }
 }
+Test.propTypes = {
+  model: PropType.instanceOf(HomeModel).isRequired,
+};
 export default connect(state => ({model: state[HomeModel.ns]}))(Test);
