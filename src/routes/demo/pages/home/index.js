@@ -28,7 +28,6 @@ export default () => {
                     开奖号码：
                     {result}
                 </div>
-
             </div>
 
         </div>
