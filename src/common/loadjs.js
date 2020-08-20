@@ -1,3 +1,9 @@
+/**
+ * 通过script标签加载资源
+ * @param {string} src - 资源地址
+ * @param attr - 加载后资源定义的全局变量
+ * @returns {Promise}
+ */
 export default (src, attr = '') => {
     if (!window.__loaded) {
         window.__loaded = {};
