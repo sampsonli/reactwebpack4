@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import { Switch, Route, useRouteMatch, useLocation, useHistory } from 'react-router-dom';
 import load from '~/common/load';
 
 const Home = load(() => import('./pages/home'));
