@@ -51,7 +51,7 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "assets-webpack-plugin": "^5.1.2",
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-webpack-dynamic-import": "^1.0.1",
