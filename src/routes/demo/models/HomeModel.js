@@ -27,8 +27,9 @@ class HomeModel extends Model {
      */
     @inject(UserModel) user;
 
-    changeName() {
-        this.user.setData({name: `${Math.random().toFixed(4)}`});
+    * changeName() {
+        const name = `${Math.random().toFixed(4)}`;
+        yield this.user.setData({name});
     }
 
     * drawLottery() {

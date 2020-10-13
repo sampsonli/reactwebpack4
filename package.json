@@ -15,7 +15,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-spring": "^1.1.13"
+    "redux-spring": "^1.1.14"
   },
   "scripts": {
     "build": "rimraf dist/* && webpack --config build/webpack.config.prod.js",
