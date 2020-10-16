@@ -20,7 +20,7 @@
   ],
   "plugins": [
     "@babel/plugin-transform-runtime",
-    "webpack-dynamic-import",
+//    "webpack-dynamic-import",
     ["@babel/plugin-proposal-decorators", {
       "legacy": true
     }],

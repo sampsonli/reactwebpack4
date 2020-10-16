@@ -7,12 +7,11 @@ import ReactDOM from 'react-dom';
 import spring from 'redux-spring';
 import { Provider } from 'react-redux';
 import loadjs from '~/common/loadjs';
-import Router from './router';
 import store from './store';
-
 import './assets/common.css';
 
 spring(store);
+const Router = require('./router').default;
 
 const render = () => {
     ReactDOM.render(
