@@ -17,7 +17,7 @@ export default () => {
         <div className={style.container}>
             <div className={style.content}>
                 <div className={style.txt} onClick={model.drawLottery}>
-                    开始摇奖
+                    开始摇奖12422226633
                 </div>
 
                 <div className={style.txt} onClick={model.changeName}>

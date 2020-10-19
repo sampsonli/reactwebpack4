@@ -26,9 +26,9 @@ export default (loadComp, LoadingComp = () => null) => (
             loadComp()
                 .then((comp) => {
                     comp.onUpdate = (args) => {
-                        this.setState({Component: args.default ? args.default : args, hot: true});
+                        this.setState({Component: args.default, hot: true});
                     };
-                    this.setState({Component: comp.default ? comp.default : comp}); // 提高兼容性
+                    this.setState({Component: comp.default});
                 })
                 .catch((err) => {
                     console.error('Cannot load component in async component. ', err.message);
