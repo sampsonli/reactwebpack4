@@ -17,7 +17,7 @@ export default () => {
         <div className={style.container}>
             <div className={style.content}>
                 <div className={style.txt} onClick={model.drawLottery}>
-                    开始摇奖12422226633
+                    开始摇奖12422
                 </div>
 
                 <div className={style.txt} onClick={model.changeName}>
@@ -33,3 +33,6 @@ export default () => {
         </div>
     );
 };
+
+
+module.hot.accept();

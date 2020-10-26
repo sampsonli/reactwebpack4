@@ -17,6 +17,4 @@ export default () => {
     );
 };
 
-/* module.hot.accept('./pages/home', () => {
-  console.log('hello');
-}); */
+
