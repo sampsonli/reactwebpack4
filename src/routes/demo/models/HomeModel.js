@@ -9,7 +9,7 @@ function wait(time) {
     });
 }
 
-@service('home1')
+@service(module.id)
 class HomeModel extends Model {
     loading = false;
 
