@@ -1,8 +1,6 @@
 import React from 'react';
-import { Switch, Route, useRouteMatch, useLocation, useHistory } from 'react-router-dom';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import load from '~/common/load';
-// import Home from './pages/home';
-// import Test from './pages/test';
 
 const Home = load(() => import('./pages/home'));
 const Test = load(() => import('./pages/test'));
@@ -16,5 +14,3 @@ export default () => {
         </Switch>
     );
 };
-
-
