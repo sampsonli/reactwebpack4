@@ -3,19 +3,19 @@
   "version": "0.1.6",
   "private": true,
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
-    "core-js": "^3.6.5",
+    "core-js": "^3.8.3",
     "moment": "^2.29.1",
     "prop-types": "^15.6.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-redux": "^7.2.1",
+    "react-redux": "^7.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-spring": "^1.1.14"
+    "redux-spring": "^2.0.18"
   },
   "scripts": {
     "build": "rimraf dist/* && webpack --config build/webpack.config.prod.js",
